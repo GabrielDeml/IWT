@@ -1,0 +1,39 @@
+{
+	"bad_tweets": [
+		{
+			"tweet": "Lot 375 - A silver presentation trowel with a superbly carved ivory handle- William Taylor for St Peters Church Preston. Hallmarked for London 1848 by Edward, John &amp; William Barnard #auction #antique #antiquesilver #silvercollection #silverdealer #churchillauctions @bidonthis https://t.co/MQjhFZWWF1",
+			"id": "1034860489803804672",
+			"suspicious_word": [
+				"ivory"
+			]
+		},
+		{
+			"tweet": "Prost! Who said the ivory doesn't sell anymore? This wonderful German cold painted bronze and ivory figure by Ferdinand Preiss sold for \u00a312,000. https://t.co/tMbGZ7ZMrY",
+			"id": "1159402859869474822",
+			"suspicious_word": [
+				"ivory"
+			]
+		},
+		{
+			"tweet": "Just a small collection of carved Ivory and Rhinoceros antiquities that was sold, paid and collected for in our latest fine art auction. Despite the potential ban, the market is still strong for these wonderful works of art. https://t.co/AvAgY9OvTR",
+			"id": "973241438820544512",
+			"suspicious_word": [
+				"ivory"
+			]
+		},
+		{
+			"tweet": "S/4625 Antique Treen Early 19th Century Circular Trinket Box\n\nA good quality and interesting Regency Period circular trinket box, having a rounded and fitted lid and base with ivory banding that is made up of various different woods throughout. \n\nhttps://t.co/7Y18uwvUHD https://t.co/RAG6qUJ62w",
+			"id": "1428664504435593216",
+			"suspicious_word": [
+				"ivory"
+			]
+		},
+		{
+			"tweet": "Magnifying Glass Ivory  10 cm c.1890 https://t.co/wK1sNP6vWg via @Etsy",
+			"id": "931128477490843650",
+			"suspicious_word": [
+				"ivory"
+			]
+		},
+	]
+}
