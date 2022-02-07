@@ -5,6 +5,11 @@ import os
 import requests
 import operator
 import nltk
+import string
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from multiprocessing import Pool
+
 
 class analysis:
 
@@ -148,3 +153,65 @@ class analysis:
                 tweets_with_search_words.append(tweet)
 
         return tweets_with_search_words, suspicious_tweet_count, total_tweet_count, suspicious_words_in_tweets
+
+    def text_cleaner(tweet: dict):
+
+        # Set up stopwords
+        table = str.maketrans('', '', string.punctuation)
+        stop = stopwords.words('english')
+        lemmatizer = WordNetLemmatizer()
+        tweet_text = analysis.get_tweet_text(tweet)
+        tweet_text = ' '.join([word for word in tweet_text.lower(
+        ).split() if word not in stop])  # remove stopwords
+        tweet_text = tweet_text.translate(table)  # remove punc.
+        tweet_text = ''.join(
+            c for c in tweet_text if not c.isdigit())  # remove numbers
+        tweet_text = tweet_text.replace(
+            '  ', ' ')  # remove double spaces
+        tweet_text = ' '.join([lemmatizer.lemmatize(word)
+                               for word in tweet_text.split()])  # lemminize
+        tweet["text"] = tweet_text
+        return tweet
+
+    def clean_tweets(tweets: list):
+        """
+        Clean tweets text.
+
+        @param tweets: list of tweets
+        @return: list of cleaned tweets
+        """
+
+        # Set up nltk
+        nltk.download('stopwords')
+        nltk.download('wordnet')
+        nltk.download('omw-1.4')
+
+        # Get number of cpu threads
+        num_threads = os.cpu_count()
+        with Pool(processes=num_threads) as pool:
+            tweets = pool.map(analysis.text_cleaner, tweets)
+
+        return tweets
+
+    def find_bigrams_from_tweets(tweets: list):
+        """
+        Creates bigrams from tweets.
+
+        @param tweets: list of tweets
+        @return: bigrams
+        """
+        # Merge all tweets into one string
+        tweets_text = "".join([analysis.get_tweet_text(tweet)
+                              for tweet in tweets])
+        return nltk.bigrams(tweets_text.split())
+
+    def get_top_bigrams(bigram, num_bigrams):
+        """
+        Get the top n bigrams.
+        
+        @param bigram: bigrams
+        @param num_bigrams: number of bigrams to get
+        @return: top n bigrams
+        """
+        bigram_count = nltk.FreqDist(bigram)
+        return bigram_count.most_common(num_bigrams)
