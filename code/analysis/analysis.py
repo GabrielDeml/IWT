@@ -4,54 +4,55 @@ from wordcloud import WordCloud
 import os
 import requests
 import operator
-
+import nltk
 
 class analysis:
 
-    search_words = ["trophy", "skin"
-                "fur",
-                "dragon",
-                "pelt",
-                "tusk",
-                "ivory",
-                "scale",
-                "taxidermy",
-                "rug",
-                "hide",
-                "bone",
-                "meat",
-                "delicacy",
-                "medicine",
-                "live",
-                "pangolin",
-                "leopard",
-                "rhino",
-                "sungazer",
-                "lizard",
-                "crocodile",
-                "alligator",
-                "parrot",
-                "snake",
-                "python",
-                "yellow material",
-                "white plastic",
-                "jelly",
-                "aloo",
-                "kola",
-                "australian teddy bear",
-                "stripped t-shirt",
-                "four wheeler",
-                "antique",
-                "mammoth",
-                "carved",
-                "sale",
-                "selling",
-                "price",
-                "xiangya",
-                "african material",
-                "ANTEBELLUMELEG1"]
+    bad_word_list = ["trophy",
+                     "skin"
+                     "fur",
+                     "dragon",
+                     "pelt",
+                     "tusk",
+                     "ivory",
+                     "scale",
+                     "taxidermy",
+                     "rug",
+                     "hide",
+                     "bone",
+                     "meat",
+                     "delicacy",
+                     "medicine",
+                     "live",
+                     "pangolin",
+                     "leopard",
+                     "rhino",
+                     "sungazer",
+                     "lizard",
+                     "crocodile",
+                     "alligator",
+                     "parrot",
+                     "snake",
+                     "python",
+                     "yellow material",
+                     "white plastic",
+                     "jelly",
+                     "aloo",
+                     "kola",
+                     "australian teddy bear",
+                     "stripped t-shirt",
+                     "four wheeler",
+                     "antique",
+                     "mammoth",
+                     "carved",
+                     "sale",
+                     "selling",
+                     "price",
+                     "xiangya",
+                     "african material",
+                     "ANTEBELLUMELEG1"]
 
-    def load_tweets(file_path: str):
+    def load_json(file_path: str):
         """
         Loads tweets from a JSON file.
 
@@ -70,21 +71,21 @@ class analysis:
         """
 
         print(json.dumps(tweet, indent=4))
-    
+
     def get_tweet_text(tweet: str):
         """
         Gets the text of a tweet.
-        
+
         @param tweet: tweet to get the text from
         @return: text of the tweet
         """
 
         return tweet['text']
-    
+
     def get_tweet_id(tweet: str):
         """
         Gets the id of a tweet.
-        
+
         @param tweet: tweet to get the id from
         @return: id of the tweet
         """
@@ -125,21 +126,25 @@ class analysis:
         tweets_with_search_words = []
         suspicious_tweet_count = 0
         total_tweet_count = 0
-        suspicious_tweets_word_count = {}
+        suspicious_words_in_tweets = {}
+        for search_word in search_words:
+            suspicious_words_in_tweets[search_word] = 0
         for tweet in tweets:
+            tweet_text = analysis.get_tweet_text(tweet)
             total_tweet_count += 1
+            tweet_suspicious = False
             for search_word in search_words:
-                if search_word in tweet.lower():
+                if search_word in tweet_text.lower():
                     if tweet_suspicious == False:
                         tweet['suspicious_word'] = [search_word]
-                        suspicious_tweets_word_list.append([search_word])
+                        suspicious_tweets_word_list.append(search_word)
                         suspicious_tweet_count += 1
                     else:
-                        suspicious_tweets_word_list[-1].append(search_word)
+                        suspicious_tweets_word_list.append(search_word)
                         tweet['suspicious_word'].append(search_word)
-                    tweet_suspicious = True
-                    suspicious_tweets_word_count[search_word] += 1
-        if len(tweet) > 0:
-            tweets_with_search_words.append(tweet)
+                        tweet_suspicious = True
+                    suspicious_words_in_tweets[search_word] += 1
+            if tweet_suspicious:
+                tweets_with_search_words.append(tweet)
 
-        return tweets_with_search_words, suspicious_tweet_count, total_tweet_count, suspicious_tweets_word_count
+        return tweets_with_search_words, suspicious_tweet_count, total_tweet_count, suspicious_words_in_tweets
