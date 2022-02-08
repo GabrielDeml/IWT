@@ -9,6 +9,7 @@ import string
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from multiprocessing import Pool
+import pandas as pd
 
 
 class analysis:
@@ -309,6 +310,53 @@ class analysis:
             return tweet_list
         else:
             return []
+        
+    def create_bar_chart(data: list, num_of_items: int, x_label : str, y_label : str, title : str, file_name : str = None):
+        """
+        Create a bar chart from a list of tuples
+        
+        @param data: list of tuples
+        @param num_of_items: number of items to show
+        @param x_label: x axis label
+        @param y_label: y axis label
+        @param title: title of the chart
+        @param file_name: name of the file to save the chart
+        """
+        data = data[:num_of_items]
+        # Create the data frame
+        df = pd.DataFrame(data, columns=[x_label, y_label])
+        # Create the chart
+        df.plot.bar(x=x_label, y=y_label)
+        # Set the title
+        plt.title(title)
+        # Save the chart
+        if file_name is not None:
+            plt.savefig(file_name)
+        plt.show()
+        plt.close()
+    
+    def create_word_cloud(tweets : list, file : str = None):
+        """
+        Create a word cloud from a list of tweets
+        
+        @param tweets: list of tweets
+        @param file: name of the file to save the word cloud
+        """
+        # Merge all tweets into one string
+        tweets_text = " ".join([analysis.get_tweet_text(tweet)
+                                for tweet in tweets])
+        # Create the word cloud
+        wordcloud = WordCloud(width=800, height=500, max_font_size=200).generate(tweets_text)
+        # Display the word cloud
+        plt.figure(figsize=(10, 8), facecolor='k')
+        plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis("off")
+        plt.tight_layout(pad=0)
+        # Save the word cloud
+        if file is not None:
+            plt.savefig(file)
+        plt.show()
+        plt.close()
             
             
         
