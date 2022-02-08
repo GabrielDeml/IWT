@@ -144,10 +144,11 @@ class analysis:
                         tweet['suspicious_word'] = [search_word]
                         suspicious_tweets_word_list.append(search_word)
                         suspicious_tweet_count += 1
+                        tweet_suspicious = True
                     else:
                         suspicious_tweets_word_list.append(search_word)
                         tweet['suspicious_word'].append(search_word)
-                        tweet_suspicious = True
+                        
                     suspicious_words_in_tweets[search_word] += 1
             if tweet_suspicious:
                 tweets_with_search_words.append(tweet)
@@ -201,17 +202,67 @@ class analysis:
         @return: bigrams
         """
         # Merge all tweets into one string
-        tweets_text = "".join([analysis.get_tweet_text(tweet)
-                              for tweet in tweets])
+        tweets_text = " ".join([analysis.get_tweet_text(tweet)
+                                for tweet in tweets])
         return nltk.bigrams(tweets_text.split())
 
     def get_top_bigrams(bigram, num_bigrams):
         """
         Get the top n bigrams.
-        
+
         @param bigram: bigrams
         @param num_bigrams: number of bigrams to get
         @return: top n bigrams
         """
         bigram_count = nltk.FreqDist(bigram)
         return bigram_count.most_common(num_bigrams)
+    
+    def get_most_common_words(tweets: list, num_words: int = None):
+        """
+        Create a list of the most common words
+        @param tweets: list of tweets
+        @param num_words: number of words to get
+        @return: list of most common words in a tuple (word, count)
+        """
+        # Merge all tweets into one string
+        tweets_text = " ".join([analysis.get_tweet_text(tweet)
+                                for tweet in tweets])
+        word_count = nltk.FreqDist(tweets_text.split())
+        if num_words is None:    
+            return word_count.most_common()
+        else:
+            return word_count.most_common(num_words)
+
+    def find_common_combinations_of_search_words(tweets: list, min_length: int):
+        """
+        Find the commin combinations of search words after running though search for words
+        
+        @param tweets: list of tweets
+        @parm min_length: minimum length of the combination
+        @return list of tuples with the search words first then the number of occurrences 
+        """
+        dict_of_tuples = {}
+        for tweet in tweets:
+            if len(tweet['suspicious_word']) >= min_length:
+                # sort the list of suspicious words alphabetically
+                sorted_suspicious_words = sorted(tweet['suspicious_word'])
+                # Combine the sorted list of suspicious words into a string
+                suspicious_words_string = ' '.join(sorted_suspicious_words)
+                if suspicious_words_string in dict_of_tuples:
+                    dict_of_tuples[suspicious_words_string] += 1
+                else:
+                    dict_of_tuples[suspicious_words_string] = 1
+        
+        out_list = []
+        # Create a list of tuples from the dictionary
+        for item in dict_of_tuples.keys():
+            item_value = dict_of_tuples[item]
+            
+            out_list.append((item.split(), item_value))
+        
+        # Sort the list of tuples by the number of occurrences
+        out_list = sorted(out_list, key=lambda x: x[-1], reverse=True)
+        return out_list
+            
+                
+                
