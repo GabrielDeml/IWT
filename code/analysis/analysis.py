@@ -257,12 +257,27 @@ class analysis:
         # Create a list of tuples from the dictionary
         for item in dict_of_tuples.keys():
             item_value = dict_of_tuples[item]
-            
             out_list.append((item.split(), item_value))
         
         # Sort the list of tuples by the number of occurrences
         out_list = sorted(out_list, key=lambda x: x[-1], reverse=True)
         return out_list
+    
+    def universal_data_loader(file_path: str):
+        """
+        Load tweets form json file(s)
+        
+        @param file_path: Path to file(s)
+        @return: list of tweets
+        """
+        tweets = []
+        for file in os.listdir(file_path):
+            if file.endswith(".json"):
+                with open(file_path + file, 'r') as f:
+                    tweets.extend(json.load(f))
+        return tweets
+        
+    
             
                 
                 
