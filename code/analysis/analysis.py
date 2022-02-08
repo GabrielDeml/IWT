@@ -270,12 +270,47 @@ class analysis:
         @param file_path: Path to file(s)
         @return: list of tweets
         """
+        
         tweets = []
-        for file in os.listdir(file_path):
-            if file.endswith(".json"):
-                with open(file_path + file, 'r') as f:
-                    tweets.extend(json.load(f))
+        # Check if the file is a directory
+        if os.path.isdir(file_path):
+            for file in os.listdir(file_path):
+                if file.endswith(".json"):
+                    with open(file_path + file, 'r') as f:
+                        tweets.append(json.load(f))
+        else:
+            # Load the single file
+            with open(file_path, 'r') as f:
+                tweets.append(json.load(f))
         return tweets
+    
+    
+    def create_tweet_list_from_loaded_json(json_data):
+        """
+        Create a list of tweets from loaded json data
+        
+        @param json_data: dict json data
+        @return: list of tweets
+        """
+        # Check if the json file is a list 
+        if type(json_data) == list:
+            # Check if the list is a list of tweets by looking for tweet text
+                tweet_list = []
+                for part in json_data:
+                    tweet_list.extend(analysis.create_tweet_list_from_loaded_json(part))
+                return tweet_list
+        elif type(json_data) == dict:
+            if 'tweet' in json_data or 'text' in json_data:
+                return [json_data]
+            # Go though the values and check if they are tweets
+            tweet_list = []
+            for value in json_data.values():
+                tweet_list.extend(analysis.create_tweet_list_from_loaded_json(value))
+            return tweet_list
+        else:
+            return []
+            
+            
         
     
             
