@@ -132,16 +132,14 @@ class analysis:
         tweets_with_search_words = []
         suspicious_tweet_count = 0
         total_tweet_count = 0
-        suspicious_words_in_tweets = {}
-        for search_word in search_words:
-            suspicious_words_in_tweets[search_word] = 0
+        suspicious_words_in_tweets = {search_word: 0 for search_word in search_words}
         for tweet in tweets:
             tweet_text = analysis.get_tweet_text(tweet)
             total_tweet_count += 1
             tweet_suspicious = False
             for search_word in search_words:
                 if search_word in tweet_text.lower():
-                    if tweet_suspicious == False:
+                    if not tweet_suspicious:
                         tweet['suspicious_word'] = [search_word]
                         suspicious_tweets_word_list.append(search_word)
                         suspicious_tweet_count += 1
@@ -149,7 +147,7 @@ class analysis:
                     else:
                         suspicious_tweets_word_list.append(search_word)
                         tweet['suspicious_word'].append(search_word)
-                        
+
                     suspicious_words_in_tweets[search_word] += 1
             if tweet_suspicious:
                 tweets_with_search_words.append(tweet)
@@ -253,13 +251,12 @@ class analysis:
                     dict_of_tuples[suspicious_words_string] += 1
                 else:
                     dict_of_tuples[suspicious_words_string] = 1
-        
-        out_list = []
-        # Create a list of tuples from the dictionary
-        for item in dict_of_tuples.keys():
-            item_value = dict_of_tuples[item]
-            out_list.append((item.split(), item_value))
-        
+
+        out_list = [
+            (item.split(), item_value)
+            for item, item_value in dict_of_tuples.items()
+        ]
+
         # Sort the list of tuples by the number of occurrences
         out_list = sorted(out_list, key=lambda x: x[-1], reverse=True)
         return out_list
@@ -331,11 +328,13 @@ class analysis:
         df = pd.DataFrame(data, columns=[x_label, y_label])
         # Create the chart
         df.plot.bar(x=x_label, y=y_label)
+        # Set image size
+        plt.figure(figsize=(10, 8))
         # Set the title
         plt.title(title)
         # Save the chart
         if file_name is not None:
-            plt.savefig(file_name)
+            plt.savefig(file_name, dpi=300, 
         plt.show()
         plt.close()
     
