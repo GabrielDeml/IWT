@@ -370,42 +370,24 @@ class analysis:
         @param bad_tweets: list of bad tweets
         @param file_name: name of the file to save the csv
         """
-        # Split the dataset 
-        good_tweets_train, good_tweets_test = train_test_split(good_tweets, test_size=val_size, random_state=42)
-        bad_tweets_train, bad_tweets_test = train_test_split(bad_tweets, test_size=val_size, random_state=42)
+        labels = [1] * len(good_tweets) + [0] * len(bad_tweets)
+        # Split using stratified sampling
+        tweets_train, labels_train, tweets_test, labels_test = train_test_split(good_tweets + bad_tweets, labels, test_size=val_size, stratify=labels)
         # Create the data frame
-        good_tweets_train_list = []
-        good_labels_train =[]
-        for tweet in good_tweets_train:
+        tweets_train_text = []
+        for tweet in tweets_train:
             # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
-            good_tweets_train_list.append(tweet_text)
-            good_labels_train.append(0)
-        bad_tweets_train_list = []
-        bad_labels_train = []
-        for tweet in bad_tweets_train:
-            tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
-            bad_tweets_train_list.append(tweet_text)
-            bad_labels_train.append(1)
-        df = pd.DataFrame({'label': good_labels_train + bad_labels_train, 'text': good_tweets_train_list + bad_tweets_train_list})
-        # Write to csv
+            tweets_train_text.append(tweet_text)
+        df = pd.DataFrame(data={"lables": labels_train, "sentence": tweets_train_text})
         df.to_csv(file_name_train, index=False)
-        
-        # Create the test data frame
-        good_tweets_test_list = []
-        good_labels_test =[]
-        for tweet in good_tweets_test:
+        # Do the same for the test data
+        tweets_test_text = []
+        for tweet in tweets_test:
+            # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
-            good_tweets_test_list.append(tweet_text)
-            good_labels_test.append(0)
-        bad_tweets_test_list = []
-        bad_labels_test = []
-        for tweet in bad_tweets_test:
-            tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
-            bad_tweets_test_list.append(tweet_text)
-            bad_labels_test.append(1)
-        df = pd.DataFrame({'label': good_labels_test + bad_labels_test, 'text': good_tweets_test_list + bad_tweets_test_list})
-        # Write to csv
+            tweets_test_text.append(tweet_text)
+        df = pd.DataFrame(data={"lables": labels_test, "sentence": tweets_test_text})
         df.to_csv(file_name_test, index=False)
             
             
