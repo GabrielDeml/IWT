@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from multiprocessing import Pool
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 
 class analysis:
@@ -361,7 +362,7 @@ class analysis:
         plt.show()
         plt.close()
         
-    def convert_to_huggingface_csv(good_tweets : list, bad_tweets : list, file_name : str):
+    def convert_to_huggingface_csv(good_tweets : list, bad_tweets : list, file_name_train : str, file_name_test : str, val_size : float = 0.8):
         """
         Convert a list of tweets to a csv file for use with huggingface
         
@@ -369,20 +370,43 @@ class analysis:
         @param bad_tweets: list of bad tweets
         @param file_name: name of the file to save the csv
         """
+        # Split the dataset 
+        good_tweets_train, good_tweets_test = train_test_split(good_tweets, test_size=val_size, random_state=42)
+        bad_tweets_train, bad_tweets_test = train_test_split(bad_tweets, test_size=val_size, random_state=42)
         # Create the data frame
-        good_tweets = []
-        good_labels =[]
-        for tweet in good_tweets:
-            good_tweets.append(analysis.get_tweet_text(tweet))
-            good_labels.append(0)
-        bad_tweets = []
-        bad_labels = []
-        for tweet in bad_tweets:
-            bad_tweets.append(analysis.get_tweet_text(tweet))
-            bad_labels.append(1)
-        df = pd.DataFrame({'sentence': good_tweets + bad_tweets, 'label': good_labels + bad_labels})
+        good_tweets_train_list = []
+        good_labels_train =[]
+        for tweet in good_tweets_train:
+            # Remove all commas and new lines
+            tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
+            good_tweets_train_list.append(tweet_text)
+            good_labels_train.append(0)
+        bad_tweets_train_list = []
+        bad_labels_train = []
+        for tweet in bad_tweets_train:
+            tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
+            bad_tweets_train_list.append(tweet_text)
+            bad_labels_train.append(1)
+        df = pd.DataFrame({'label': good_labels_train + bad_labels_train, 'text': good_tweets_train_list + bad_tweets_train_list})
         # Write to csv
-        df.to_csv(file_name, index=False)
+        df.to_csv(file_name_train, index=False)
+        
+        # Create the test data frame
+        good_tweets_test_list = []
+        good_labels_test =[]
+        for tweet in good_tweets_test:
+            tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
+            good_tweets_test_list.append(tweet_text)
+            good_labels_test.append(0)
+        bad_tweets_test_list = []
+        bad_labels_test = []
+        for tweet in bad_tweets_test:
+            tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
+            bad_tweets_test_list.append(tweet_text)
+            bad_labels_test.append(1)
+        df = pd.DataFrame({'label': good_labels_test + bad_labels_test, 'text': good_tweets_test_list + bad_tweets_test_list})
+        # Write to csv
+        df.to_csv(file_name_test, index=False)
             
             
             
