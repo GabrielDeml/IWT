@@ -11,6 +11,7 @@ from nltk.stem import WordNetLemmatizer
 from multiprocessing import Pool
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import emoji
 
 
 class analysis:
@@ -385,17 +386,27 @@ class analysis:
         for tweet in tweets_train:
             # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
+            # Remove all emojis
+            # tweet_text = emoji.demojize(tweet_text)
+            # Remove all '
+            # tweet_text = tweet_text.replace("'", "")
             tweets_train_text.append(tweet_text)
        
-        df = pd.DataFrame(data={"lables": labels_train, "sentence": tweets_train_text})
+        df = pd.DataFrame(data={"label": labels_train, "sentence": tweets_train_text})
+        df = df.dropna()
         df.to_csv(file_name_train, index=False)
         # Do the same for the test data
         tweets_test_text = []
         for tweet in tweets_test:
             # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
+            # Remove all emojis
+            # tweet_text = emoji.demojize(tweet_text)
+            # Remove all '
+            # tweet_text = tweet_text.replace("'", "")
             tweets_test_text.append(tweet_text)
-        df = pd.DataFrame(data={"lables": labels_test, "sentence": tweets_test_text})
+        df = pd.DataFrame(data={"label": labels_test, "sentence": tweets_test_text})
+        df = df.dropna()
         df.to_csv(file_name_test, index=False)
             
             
