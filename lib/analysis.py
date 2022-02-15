@@ -370,15 +370,23 @@ class analysis:
         @param bad_tweets: list of bad tweets
         @param file_name: name of the file to save the csv
         """
-        labels = [1] * len(good_tweets) + [0] * len(bad_tweets)
+        labels = ([1] * len(good_tweets)) + ([0] * len(bad_tweets))
+        print("Labels length: ", len(labels))
+        print("Good tweets length: ", len(good_tweets))
+        print("Bad tweets length: ", len(bad_tweets))
         # Split using stratified sampling
-        tweets_train, labels_train, tweets_test, labels_test = train_test_split(good_tweets + bad_tweets, labels, test_size=val_size, stratify=labels)
+        tweets_train, tweets_test, labels_train, labels_test = train_test_split(good_tweets + bad_tweets, labels, test_size=val_size, stratify=labels)
+        print("Tweets train length: ", len(tweets_train))
+        print("Labels train length: ", len(labels_train))
+        print("Tweets test length: ", len(tweets_test))
+        print("Labels test length: ", len(labels_test))
         # Create the data frame
         tweets_train_text = []
         for tweet in tweets_train:
             # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
             tweets_train_text.append(tweet_text)
+       
         df = pd.DataFrame(data={"lables": labels_train, "sentence": tweets_train_text})
         df.to_csv(file_name_train, index=False)
         # Do the same for the test data
