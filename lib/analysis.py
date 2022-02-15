@@ -2,8 +2,6 @@ import json
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import os
-import requests
-import operator
 import nltk
 import string
 from nltk.corpus import stopwords
@@ -11,7 +9,7 @@ from nltk.stem import WordNetLemmatizer
 from multiprocessing import Pool
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import emoji
+import random
 
 
 class analysis:
@@ -375,39 +373,47 @@ class analysis:
         print("Labels length: ", len(labels))
         print("Good tweets length: ", len(good_tweets))
         print("Bad tweets length: ", len(bad_tweets))
+        
         # Split using stratified sampling
         tweets_train, tweets_test, labels_train, labels_test = train_test_split(good_tweets + bad_tweets, labels, test_size=val_size, stratify=labels)
         print("Tweets train length: ", len(tweets_train))
         print("Labels train length: ", len(labels_train))
         print("Tweets test length: ", len(tweets_test))
         print("Labels test length: ", len(labels_test))
+        
         # Create the data frame
         tweets_train_text = []
         for tweet in tweets_train:
             # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
-            # Remove all emojis
-            # tweet_text = emoji.demojize(tweet_text)
-            # Remove all '
-            # tweet_text = tweet_text.replace("'", "")
             tweets_train_text.append(tweet_text)
        
         df = pd.DataFrame(data={"label": labels_train, "sentence": tweets_train_text})
         df = df.dropna()
         df.to_csv(file_name_train, index=False)
+        
         # Do the same for the test data
         tweets_test_text = []
         for tweet in tweets_test:
             # Remove all commas and new lines
             tweet_text = analysis.get_tweet_text(tweet).replace(',', '').replace('\n', '')
-            # Remove all emojis
-            # tweet_text = emoji.demojize(tweet_text)
-            # Remove all '
-            # tweet_text = tweet_text.replace("'", "")
             tweets_test_text.append(tweet_text)
+            
         df = pd.DataFrame(data={"label": labels_test, "sentence": tweets_test_text})
         df = df.dropna()
         df.to_csv(file_name_test, index=False)
+        
+    def random_tweet_selector(tweets: list, number_of_tweets :int, seed: int = 1):
+        """
+        Select a random number of tweets from a list
+        
+        @param tweets: list of tweets
+        @param number_of_tweets: number of tweets to select
+        @param seed: seed for the random number generator
+        @return: list of tweets
+        """
+        random.seed(seed)
+        return random.sample(tweets, number_of_tweets)
             
             
             
