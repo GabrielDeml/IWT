@@ -334,7 +334,7 @@ class analysis:
         plt.title(title)
         # Save the chart
         if file_name is not None:
-            plt.savefig(file_name, dpi=300, 
+            plt.savefig(file_name, dpi=300)
         plt.show()
         plt.close()
     
@@ -360,6 +360,30 @@ class analysis:
             plt.savefig(file)
         plt.show()
         plt.close()
+        
+    def convert_to_huggingface_csv(good_tweets : list, bad_tweets : list, file_name : str):
+        """
+        Convert a list of tweets to a csv file for use with huggingface
+        
+        @param good_tweets: list of good tweets
+        @param bad_tweets: list of bad tweets
+        @param file_name: name of the file to save the csv
+        """
+        # Create the data frame
+        good_tweets = []
+        good_labels =[]
+        for tweet in good_tweets:
+            good_tweets.append(analysis.get_tweet_text(tweet))
+            good_labels.append(0)
+        bad_tweets = []
+        bad_labels = []
+        for tweet in bad_tweets:
+            bad_tweets.append(analysis.get_tweet_text(tweet))
+            bad_labels.append(1)
+        df = pd.DataFrame({'sentence': good_tweets + bad_tweets, 'label': good_labels + bad_labels})
+        # Write to csv
+        df.to_csv(file_name, index=False)
+            
             
             
         
