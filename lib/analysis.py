@@ -1,3 +1,4 @@
+import re
 import json
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
@@ -414,11 +415,15 @@ class analysis:
         """
         random.seed(seed)
         return random.sample(tweets, number_of_tweets)
-            
-            
-            
-        
     
-            
-                
-                
+    def process_match(m):
+        return 
+
+    def replace_urls(text: str):
+        """
+        Replaces urls with "url"
+        
+        @param text: text to remove urls form
+        @return: Text without urls
+        """
+        return re.compile(r"""(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>\[\]]+|\(([^\s()<>\[\]]+|(\([^\s()<>\[\]]+\)))*\))+(?:\(([^\s()<>\[\]]+|(\([^\s()<>\[\]]+\)))*\)|[^\s`!(){};:'".,<>?\[\]]))""").sub('{{URL}}', text)   
