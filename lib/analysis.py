@@ -427,3 +427,12 @@ class analysis:
         @return: Text without urls
         """
         return re.compile(r"""(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>\[\]]+|\(([^\s()<>\[\]]+|(\([^\s()<>\[\]]+\)))*\))+(?:\(([^\s()<>\[\]]+|(\([^\s()<>\[\]]+\)))*\)|[^\s`!(){};:'".,<>?\[\]]))""").sub('{{URL}}', text)   
+    
+    def replace_mentions(text: str):
+        """
+        Replaces mentions with "mention"
+        
+        @param text: text to remove mentions from
+        @return: Text without mentions
+        """
+        return re.compile(r"""(?i)\B@[a-z0-9_]{1,15}""").sub('{{MENTION}}', text)
