@@ -1,3 +1,4 @@
+import re
 import json
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
@@ -10,6 +11,7 @@ from multiprocessing import Pool
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import random
+from langdetect import detect
 
 
 class analysis:
@@ -414,11 +416,33 @@ class analysis:
         """
         random.seed(seed)
         return random.sample(tweets, number_of_tweets)
-            
-            
-            
-        
     
-            
-                
-                
+    def process_match(m):
+        return 
+
+    def replace_urls(text: str):
+        """
+        Replaces urls with "url"
+        
+        @param text: text to remove urls form
+        @return: Text without urls
+        """
+        return re.compile(r"""(?i)\b((?:[a-z][\w-]+:(?:/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>\[\]]+|\(([^\s()<>\[\]]+|(\([^\s()<>\[\]]+\)))*\))+(?:\(([^\s()<>\[\]]+|(\([^\s()<>\[\]]+\)))*\)|[^\s`!(){};:'".,<>?\[\]]))""").sub('{{URL}}', text)   
+    
+    def replace_mentions(text: str):
+        """
+        Replaces mentions with "mention"
+        
+        @param text: text to remove mentions from
+        @return: Text without mentions
+        """
+        return re.compile(r"""(?i)\B@[a-z0-9_]{1,15}""").sub('{{MENTION}}', text)
+    
+    def is_english(text: str):
+        """
+        Checks to make sure that a string is english
+        
+        @param text: Text to make that that it is english
+        @return bool: Whether it is english or not
+        """
+        return not text or detect(text) == 'en'
