@@ -11,6 +11,7 @@ from multiprocessing import Pool
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import random
+from langdetect import detect
 
 
 class analysis:
@@ -436,3 +437,12 @@ class analysis:
         @return: Text without mentions
         """
         return re.compile(r"""(?i)\B@[a-z0-9_]{1,15}""").sub('{{MENTION}}', text)
+    
+    def is_english(text: str):
+        """
+        Checks to make sure that a string is english
+        
+        @param text: Text to make that that it is english
+        @return bool: Whether it is english or not
+        """
+        return not text or detect(text) == 'en'
