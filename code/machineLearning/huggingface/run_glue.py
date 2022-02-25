@@ -440,7 +440,8 @@ def main():
     if data_args.task_name is not None:
         metric = load_metric("glue", data_args.task_name)
     else:
-        metric = load_metric("accuracy")
+        # metric = load_metric("accuracy")
+        metric = load_metric("f1")
 
     # You can define your custom compute_metrics function. It takes an `EvalPrediction` object (a namedtuple with a
     # predictions and label_ids field) and has to return a dictionary string to float.
@@ -455,7 +456,7 @@ def main():
         elif is_regression:
             return {"mse": ((preds - p.label_ids) ** 2).mean().item()}
         else:
-            return {"accuracy": (preds == p.label_ids).astype(np.float32).mean().item()}
+            return metric.compute(predictions=preds, references=p.label_ids, average="macro")
 
     # Data collator will default to DataCollatorWithPadding, so we change it if we already did the padding.
     if data_args.pad_to_max_length:
