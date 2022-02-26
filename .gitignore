@@ -2,3 +2,4 @@ key.json
 data/followers_timeline_whole
 *.pyc
 data/dataset/images
+data/dataset/images_fake_ids
