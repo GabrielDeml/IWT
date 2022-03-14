@@ -438,6 +438,15 @@ class analysis:
         """
         return re.compile(r"""(?i)\B@[a-z0-9_]{1,15}""").sub('{{MENTION}}', text)
     
+    def replace_emails(text: str):
+        """
+        Replaces emails with "email"
+        
+        @param text: text to remove emails from
+        @return: Text without emails
+        """
+        return re.compile(r"""(?i)\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\b""").sub('{{EMAIL}}', text)
+    
     def is_english(text: str):
         """
         Checks to make sure that a string is english
@@ -446,3 +455,4 @@ class analysis:
         @return bool: Whether it is english or not
         """
         return not text or detect(text) == 'en'
+    
