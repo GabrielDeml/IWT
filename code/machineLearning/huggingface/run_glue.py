@@ -326,6 +326,7 @@ def main():
         use_fast=model_args.use_fast_tokenizer,
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
+        additional_special_tokens=["[nodes]", "[noocr]"]
     )
     model = AutoModelForSequenceClassification.from_pretrained(
         model_args.model_name_or_path,
