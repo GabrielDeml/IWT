@@ -325,9 +325,10 @@ def main():
         cache_dir=model_args.cache_dir,
         use_fast=model_args.use_fast_tokenizer,
         revision=model_args.model_revision,
-        use_auth_token=True if model_args.use_auth_token else None,
-        additional_special_tokens=["[nodes]", "[noocr]"]
+        use_auth_token=True if model_args.use_auth_token else None
+        # additional_special_tokens=("[nodes]", "[noocr]")
     )
+  
     model = AutoModelForSequenceClassification.from_pretrained(
         model_args.model_name_or_path,
         from_tf=bool(".ckpt" in model_args.model_name_or_path),
@@ -335,7 +336,9 @@ def main():
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
-    )
+    )  
+    tokenizer._add_tokens(["[nodes]", "[noocr]"])
+    model.resize_token_embeddings(len(tokenizer))
 
     # Preprocessing the raw_datasets
     if data_args.task_name is not None:
