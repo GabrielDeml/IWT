@@ -337,7 +337,7 @@ def main():
         revision=model_args.model_revision,
         use_auth_token=True if model_args.use_auth_token else None,
     )  
-    tokenizer._add_tokens(["[nodes]", "[noocr]"])
+    tokenizer._add_tokens(["[nodes]", "[noocr]", "{{URL}}", "{{MENTION}}", "{{EMAIL}}"])
     model.resize_token_embeddings(len(tokenizer))
 
     # Preprocessing the raw_datasets
@@ -460,7 +460,7 @@ def main():
         elif is_regression:
             return {"mse": ((preds - p.label_ids) ** 2).mean().item()}
         else:
-            return metric.compute(predictions=preds, references=p.label_ids, average="macro")
+            return metric.compute(predictions=preds, references=p.label_ids, average="micro")
 
     # Data collator will default to DataCollatorWithPadding, so we change it if we already did the padding.
     if data_args.pad_to_max_length:
