@@ -12,7 +12,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import random
 from langdetect import detect
-
+from bs4 import BeautifulSoup
 
 class analysis:
 
@@ -455,4 +455,32 @@ class analysis:
         @return bool: Whether it is english or not
         """
         return not text or detect(text) == 'en'
+    
+    def clean_with_beautifulsoup(text: str):
+        """
+        Clean a string using beautifulsoup
+        
+        @param text: Text to clean
+        @return: Cleaned text
+        """
+        beautiful_soup = BeautifulSoup(text, 'html.parser')
+        text = beautiful_soup.get_text()
+        # Run it though a second time
+        beautiful_soup = BeautifulSoup(text, 'html.parser')
+        text = beautiful_soup.get_text()
+        return text
+    
+    def clean_text(text: str):
+        """
+        Clean a string
+        
+        @param text: Text to clean
+        @return: Cleaned text
+        """
+        text = text.lower()
+        text = analysis.replace_urls(text)
+        text = analysis.replace_mentions(text)
+        text = analysis.replace_emails(text)
+        text = analysis.clean_with_beautifulsoup(text)
+        return text
     
