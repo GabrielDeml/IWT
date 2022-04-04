@@ -99,7 +99,26 @@ seizures. The last category of actors that Phelps et al. (2016) identified were 
 use the final goods. An example of a supply chain an illicit good may pass through can be seen
 below in Figure 2.
 
+* Background
+ * The basic structure of the supply chain
+ * Why someone would be involved in IIT
+   * Why would someone sell IIT
+     * What type ot people would sell IIT
+   * Why would someone buy IIT
+     * What type of people would be buying IIT
+ * What the cost on the environment is
+ * What punishment would be given to the perpetrator
+
+Paragraph 1:
+ * Who poached the elephant?
+ * Who is it being sold to?
+ * What type of market would it go through?
+
+Notes:
+* Once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)
 * 
+
+
 
 
 
@@ -117,3 +136,4 @@ Laws:
 4. https://www.animallaw.info/article/international-strategy-ivory-trade-ban-united-states-and-china#sintro
 5. https://www.federalregister.gov/documents/2016/06/06/2016-13173/endangered-and-threatened-wildlife-and-plants-revision-of-the-section-4d-rule-for-the-african?utm_campaign=subscription+mailing+list&utm_medium=email&utm_source=federalregister.gov
 6. https://www.nationalgeographic.com/newsletters/animals/article/is-elephant-poaching-declining-june-25
+7. https://conbio.onlinelibrary.wiley.com/doi/epdf/10.1111/cobi.12377?saml_referrer
