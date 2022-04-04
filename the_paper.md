@@ -99,6 +99,8 @@ seizures. The last category of actors that Phelps et al. (2016) identified were 
 use the final goods. An example of a supply chain an illicit good may pass through can be seen
 below in Figure 2.
 
+* 
+
 
 
 
