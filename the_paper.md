@@ -13,7 +13,7 @@ accessible on our website, Wildlife Trafficking in Africa. This project is an in
 automatically extract, collect, and display, wildlife trafficking data for experts to easily analyze.
 
 
-The illegal ivory trade (IIT) is a major concern in the world today. It is estimated that over XX billion animals are killed each year by illegal trade. Of that, XX are poached for their ivory.  Some of these poached species include the African Elephant, Walrus, and X. To help stop IWT, we are investigating the use of Twitter to identify illegal wildlife trade and potentially remove the offending tweets. We worked under the assumption that if poachers have no clients, they have no incentive to participate in IIT. In this paper we are making two contributions a BERT based machine learning model for identifying IWT and the largest dataset of IIT tweets. We will also discuss the potential impact of this project on the world of wildlife trade.
+The illegal ivory trade (IIT) is a major concern in the world today. It is estimated that over 30,000 African elephants are killed each year by illegal trade. The population is decreasing by about 0.6% per year (1). To help stop IIT, we are investigating the use of Twitter to identify IIT and potentially remove the offending tweets. We worked under the assumption that if poachers have no clients, they have no incentive to participate in IIT. In this paper we are making two contributions a BERT based machine learning model for identifying IWT and the largest dataset of IIT tweets. We will also discuss the potential impact of this project on the world of wildlife trade.
 
 ## Introduction 
 
@@ -48,7 +48,7 @@ leveraged to identify trends and insights about wildlife trafficking.
  * What is the problem with their solutions?
  * 
 
-The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to national geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about XX. Our goal is to create a framework that would make it harder for sellers of IIT to find clients. We believe that if poachers have no clients, they have no incentive to participate in IIT. There have been some past attempts to address this issue, but they were not very successful since they were using clustering instead of a strong machine learning model like BERT. We even found that 4 out of the 9 tweets they found were not actually ivory, but ivory replicas. Using our BERT we were able to identify IIT tweets with XX accuracy. This allows us to create a large dataset of IIT tweets that could be used by future researchers. 
+The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to national geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. The african elephant is not the only species that this is happening too. It is also happening to the Asian elephant,  Our goal is to create a framework that would make it harder for sellers of IIT to find clients. We believe that if poachers have no clients, they have no incentive to participate in IIT. There have been some past attempts to address this issue, but they were not very successful since they were using clustering instead of a strong machine learning model like BERT. We even found that 4 out of the 9 tweets they found were not actually ivory, but ivory replicas. Using our BERT we were able to identify IIT tweets with XX accuracy. This allows us to create a large dataset of IIT tweets that could be used by future researchers. 
 
 ## Motivation 
 
@@ -109,10 +109,26 @@ below in Figure 2.
  * What the cost on the environment is
  * What punishment would be given to the perpetrator
 
+
+
 Paragraph 1:
- * Who poached the elephant?
+ * Who poaches the elephants?
+   * 
+Paragraph 2:
  * Who is it being sold to?
+Paragraph 3:
  * What type of market would it go through?
+Paragraph 4:
+* What is the punishment given to the perpetrator?
+Paragraph 5:
+ * What is the cost on the environment/economy?
+   * https://www.nature.com/articles/s41467-019-09993-2
+   * 
+
+There is a monetary incentive for poaching elephants. It is estimated that poachers receive about $180 per exhibition (1)  
+
+
+
 
 Notes:
 * Once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)
@@ -130,6 +146,7 @@ Used:
 
 Might be useful:
 1. https://onlinelibrary.wiley.com/doi/epdf/10.2307/1244594?saml_referrer
+   1. ECONOMICS OT ANTIPOACHING ENFORCEMENT AND THE IVORY TRADE BAN
 2. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0076539
 3. https://www.animallaw.info/article/international-strategy-ivory-trade-ban-united-states-and-china#sintro
 Laws:
@@ -137,3 +154,6 @@ Laws:
 5. https://www.federalregister.gov/documents/2016/06/06/2016-13173/endangered-and-threatened-wildlife-and-plants-revision-of-the-section-4d-rule-for-the-african?utm_campaign=subscription+mailing+list&utm_medium=email&utm_source=federalregister.gov
 6. https://www.nationalgeographic.com/newsletters/animals/article/is-elephant-poaching-declining-june-25
 7. https://conbio.onlinelibrary.wiley.com/doi/epdf/10.1111/cobi.12377?saml_referrer
+8. https://link.springer.com/content/pdf/10.1007/s10745-004-6097-7.pdf
+9. https://cites.org/eng/news/pr/African_elephant_poaching_down_ivory_seizures_up_and_hit_record_high_24102017
+10. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/fee.1325?casa_token=0ARyyjyH4BkAAAAA%3AR2LPO7naoeZZao9VQaOPRFOM4cND_bgj8OkqmTmSkJhyfMhZeohax1-5T3v0CDMy-mDP-qbGQB0LvQc
