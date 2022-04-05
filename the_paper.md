@@ -48,7 +48,7 @@ leveraged to identify trends and insights about wildlife trafficking.
  * What is the problem with their solutions?
  * 
 
-The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to National Geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. We are focusing on the African elephant, but it is not the only species that this is happening too. It is also happening to the Asian elephant and rhinoceros(11). Our goal is to create a framework that would make it harder for sellers of IIT to find clients. We believe that if poachers have no clients, they have no incentive to participate in IIT. There have been some past attempts to address this issue, but they were not very successful since they were using clustering instead of a strong machine learning model like BERT. We even found that 4 out of the 9 tweets they found were not actually ivory, but ivory replicas. Using our BERT, we were able to identify IIT tweets with XX accuracy. This allows us to create a large dataset of IIT tweets that could be used by future researchers. 
+The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to National Geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. We are focusing on the african elephant, but it is not the only species that this is happening too. It is also happening to the Asian elephant, rhinos(11). Our goal is to create a framework that would make it harder for sellers of IIT to find clients. We believe that if poachers have no clients, they have no incentive to participate in IIT. There have been some past attempts to address this issue, but they were not very successful since they were using clustering instead of a strong machine learning model like BERT. We even found that 4 out of the 9 tweets they found were not actually ivory, but ivory replicas. Using our BERT we were able to identify IIT tweets with XX accuracy. This allows us to create a large dataset of IIT tweets that could be used by future researchers. 
 
 ## Motivation 
 
@@ -72,7 +72,7 @@ seizures within different countries across a certain period.
  * A short outline of the paper
 
 
-There were two motivations for this project. The first motivation is to demonstrate that it is possible to automatically classify user generated content. We believe that this model could potentially be applied to a dynamic and high speed platform. This paper focuses on Twitter, but the same principles should apply to other platforms as well. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes post that are promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform setting out to implement such an algorithm. The second motivation is to build a large enough dataset of IIT texts that such platforms can use it as a seed dataset. One of our worst problems was generating our initial dataset to seed the model. We believe that this dataset will be large enough to be used by researchers in the future.
+There were two motivations for this project. The first motivation is to demonstrate that it is possible to automatically classify user generated content. We believe that this model could potentially be applied to a dynamic and high speed platform. this paper focuses on twitter, but the same principles should apply to other platforms as well. We hope that it will demonstrates to media platforms that it is possible and practical to implement an algorithm that automatically removes post that are promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform setting out to implement such an algorithm. The second motivation is to build a large enough dataset of IIT texts that that such platforms can use it as a seed dataset. One of our worst problems was generating our initial dataset to seed the model. We believe that this dataset will be large enough to be used by researchers in the future. 
 
 # Background
 
@@ -103,7 +103,7 @@ below in Figure 2.
  * The basic structure of the supply chain
  * Why someone would be involved in IIT
    * Why would someone sell IIT
-     * What type of people would sell IIT
+     * What type ot people would sell IIT
    * Why would someone buy IIT
      * What type of people would be buying IIT
  * What the cost on the environment is
@@ -116,18 +116,16 @@ Paragraph 1:
    * 
 Paragraph 2:
  * Who is it being sold to?
-   * https://www.sciencedirect.com/science/article/pii/S0006320714003371?casa_token=jxfHglTOhI0AAAAA:DtE4ATQ7-t6Bd_P4n22P7TFnXRffCkoh9AFDibarJnjfDc4-j2X5j3YarHZfx3BpMw-XKJSX
 Paragraph 3:
  * What type of market would it go through?
 Paragraph 4:
 * What is the punishment given to the perpetrator?
-  * https://www.traffic.org/site/assets/files/2544/w-traps-elephant-rhino-report.pdf
 Paragraph 5:
  * What is the cost on the environment/economy?
    * https://www.nature.com/articles/s41467-019-09993-2
    * 
 
-There is a monetary incentive for poaching elephants. Ivory harvesters go out and hunt the elephants for their ivory It is estimated that poachers receive about $180 per exhibition (1)  
+There is a monetary incentive for poaching elephants. It is estimated that poachers receive about $180 per exhibition (1)  
 
 
 
@@ -160,4 +158,3 @@ Laws:
 9. https://cites.org/eng/news/pr/African_elephant_poaching_down_ivory_seizures_up_and_hit_record_high_24102017
 10. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/fee.1325?casa_token=0ARyyjyH4BkAAAAA%3AR2LPO7naoeZZao9VQaOPRFOM4cND_bgj8OkqmTmSkJhyfMhZeohax1-5T3v0CDMy-mDP-qbGQB0LvQc
 11. https://www.sciencedirect.com/science/article/pii/S2351989420306867
-12. https://www.traffic.org/site/assets/files/2544/w-traps-elephant-rhino-report.pdf
