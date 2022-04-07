@@ -13,7 +13,7 @@ accessible on our website, Wildlife Trafficking in Africa. This project is an in
 automatically extract, collect, and display, wildlife trafficking data for experts to easily analyze.
 
 
-The illegal ivory trade (IIT) is a major concern in the world today. It is estimated that over 30,000 African elephants are killed each year by illegal trade. The population is decreasing by about 0.6% per year (1). To help stop IIT, we are investigating the use of Twitter to identify IIT and potentially remove the offending tweets. We worked under the assumption that if poachers have no clients, they have no incentive to participate in IIT. In this paper we are making two contributions, a BERT based machine learning model for identifying IIT and the largest dataset of IIT tweets. We will also discuss the potential impact of this project on the world of wildlife trade.
+The illegal ivory trade (abbreviated as IIT) is a major concern in the world today. It is estimated that over 30,000 African elephants are killed each year by illegal trade. The population is decreasing by about 0.6% per year. To help stop IIT, we are investigating the use of Twitter to identify IIT and potentially remove the offending tweets. We worked under the assumption that if poachers have no clients, they have no incentive to participate in IIT. There has been work done before about automatically detecting offending Tweets, but they were using a basic biterm clustering algorithm since they were limited by having limited training data. In this paper we are making two contributions, a BERT based machine learning model for identifying IIT and the largest dataset of IIT tweets. We will also discuss the potential impact of this project on the world of wildlife trade.
 
 ## Introduction 
 
@@ -48,9 +48,14 @@ leveraged to identify trends and insights about wildlife trafficking.
  * What is the problem with their solutions?
  * 
 
-The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to National Geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. We are focusing on the african elephant, but it is not the only species that this is happening too. It is also happening to the Asian elephant, rhinos(11). There have been some past attempts to address this issue, but they were not very successful since they were using clustering instead of a strong machine learning model like BERT.
+The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to National Geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. We are focusing on elephants, but it is being affected by IIT. It is also happening to the rhinos(11) and walruses. There have been some past attempts to address this issue by using a biterm clustering model (12). Using a clustering model inherently has a very low accuracy. In fact 4 out of 9 tweets they report as illegal ivory trade we do not agree with since the items being sold are referring to the color ivory or ivory lookalike(12). They were also limited by not having an initial dataset (12). We address these problems in two ways:
+* We built the largest ever dataset of IIT Tweets Our Dataset contains XX IIT Tweets.
+* Created the first BERT based model for IIT. This allowed us to obtain an accuracy of about XX%.
 
-There were two motivations for this project. The first motivation is to demonstrate that it is possible to automatically classify user generated content. We believe that this model could potentially be applied to a dynamic and high speed platform. this paper focuses on twitter, but the same principles should apply to other platforms as well. We hope that it will demonstrates to media platforms that it is possible and practical to implement an algorithm that automatically removes post that are promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform setting out to implement such an algorithm. The second motivation is to build a large enough dataset of IIT texts that that such platforms can use it as a seed dataset. One of our worst problems was generating our initial dataset to seed the model. We believe that this dataset will be large enough to be used by researchers in the future. 
+Project Goal:
+There were two goals for this project. The first goal is to demonstrate that it is possible to automatically classify user generated content. We believe that this model could potentially be applied to a dynamic and high speed platform. This paper focuses on Twitter, but the same principles should apply to other platforms as well. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes post that are promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform setting out to implement such an algorithm. The second goal is to build a large enough dataset of IIT texts that such platforms can use it as a seed dataset. One of our biggest challenge was generating our initial dataset to seed the model. We believe that this dataset will be large enough to be used by researchers in the future.
+
+
 
  Our goal is to create a framework that would make it harder for sellers of IIT to find clients. We believe that if poachers have no clients, they have no incentive to participate in IIT. 
 
@@ -128,7 +133,7 @@ Paragraph 4:
 Paragraph 5:
  * What is the cost on the environment/economy?
    * https://www.nature.com/articles/s41467-019-09993-2
-   * 
+   *  
 
 There is a monetary incentive for poaching elephants. It is estimated that poachers receive about $180 per exhibition (1)  
 
