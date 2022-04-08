@@ -94,7 +94,6 @@ below in Figure 2.
 
 Paragraph 1:
  * Who poaches the elephants?
-   *
 Paragraph 2:
  * Who is it being sold to?
    * https://www.sciencedirect.com/science/article/pii/S0006320714003371?casa_token=jxfHglTOhI0AAAAA:DtE4ATQ7-t6Bd_P4n22P7TFnXRffCkoh9AFDibarJnjfDc4-j2X5j3YarHZfx3BpMw-XKJSX
@@ -108,8 +107,73 @@ Paragraph 5:
    * https://www.nature.com/articles/s41467-019-09993-2
 
 
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13).
 
-There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13).  In other words, ivory is worth a lot. 
+There are two main types of ivory. One is from the African elephant and the other is from the Asian elephant. The African elephant’s ivory is much harder and in higher demand than the Asian elephant’s ivory.
+
+Ivory has been used for centuries for ornaments, carvings and jewelry. It is still used for many of these purposes. It is a very soft material, but it is also very strong.
+
+African elephants are killed for their tusks, which are sold in many countries, including the United States. This ivory is then used to make various items, including jewelry, statues, and carvings.
+
+It is estimated that over 100,000 African elephants were killed for their ivory between 2010 and 2012. This is a huge increase from the estimated 10,000 African elephants that were killed for their ivory in 2007 (13).
+
+This rise in the number of elephants being killed for their ivory is alarming. It is more than the African elephant population can sustain.
+
+The African elephant population has declined by about 30% since 1979. This is largely due to the ivory trade.
+
+The African elephant is listed as endangered by the IUCN Red List. The Asian elephant is listed
+
+
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13). So, the total value of the ivory from a single elephant is about $108,000. There are two main markets for poached ivory, one is the carving market which is mostly in Asia, and the other is the illegal trade market. The carving market is where the ivory is turned into trinkets and other objects (13). The illegal trade market is where the ivory is smuggled and then sold on the black market (13). The punishment for poaching an elephant is a fine of up to $200,000 and/or up to 10 years in jail (14). The cost of poaching on the environment is the loss of a keystone species, which can have a large impact on the ecosystem (15). The cost of poaching on the economy is the loss of revenue from tourism, as well as the cost of enforcing the laws against poaching.
+
+
+
+
+Paragraph 1:
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13). So who is it that is doing the poaching?
+
+The answer to that question is complicated, as the poaching of elephants is often done by organized crime syndicates. These syndicates are often based in Africa, but they have connections to buyers in Asia, specifically in China (1). The syndicates will hire poachers to go out and kill the elephants, and then they will smuggle the ivory out of the country to be sold.
+
+Paragraph 2:
+The ivory is being sold to buyers in Asia, specifically in China. The Chinese market for ivory is the biggest in the world, and it is driving the illegal trade in ivory (1). The demand for ivory in China is so high that the price of ivory has doubled in the last three years (1). This high demand is causing more and more elephants to be killed for their ivory, which is having a devastating impact on elephant populations.
+
+Paragraph 3:
+The ivory market in China is a black market. This means that it is illegal to buy and sell ivory in China, but the trade still takes place. The black market is a type of market that exists outside of the legal system. This market is not regulated by the government, and it is often used to buy and sell illegal goods.
+
+Paragraph 4:
+The punishment for poaching elephants is not severe enough to deter the crime. In many African countries, the punishment for poaching is a fine or a short prison sentence (2). This is not enough to deter poachers, as they can make a lot of money by selling ivory. In some cases, the syndicates that hire poachers will even provide them with weapons and vehicles (1).
+
+Paragraph 5:
+The cost of elephant poaching is high. It is estimated that the illegal trade in ivory is worth $10 billion per year (1). This money is often used to fund other criminal activities, such as drug trafficking and terrorism (1). The cost of elephant poaching is also high for the environment and for the economy. Elephant poaching is having a devastating impact on elephant populations. It is estimated that there are only 400,000 elephants left in the wild (3). This is a decrease of 30% in the last seven years (3). The loss of elephants is also having an impact on the environment. Elephants play an important role in the ecosystem, and their loss is having a negative impact on the environment. In addition, the loss of elephants is also having an impact on the economy. The tourism industry in Africa relies heavily on elephants. If the elephant population continues to decline, it will have a negative impact on the economy.
+
+
+Paragraph 1:
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13). Poaching of elephants is often done by organized crime syndicates. There are many reasons for this but the most important is that there is a high demand for ivory. The syndicates are able to sell the ivory for a high price and they can make a large profit.
+
+Paragraph 2:
+The ivory is being sold to people who want to use it for ornamental purposes. The most common use for ivory is for making carved sculptures. It is also used for making jewellery, piano keys, and other decorative items. The demand for ivory is highest in Asia, especially in China. This is because there is a long history of using ivory in China. Ivory is seen as a symbol of wealth and status.
+
+Paragraph 3:
+The market for ivory is a global one. The ivory is often sold through illegal channels. This is because the trade in ivory is regulated by the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). CITES is an international agreement that regulates the trade in endangered species. The trade in ivory is only allowed if the ivory is from a legal source and if it is for non-commercial purposes.
+
+Paragraph 4:
+The punishment for poaching elephants is not as severe as it should be. This is because the crime is often difficult to prosecute. The poachers often operate in remote areas and it is difficult to catch them. Even if they are caught, the penalties are often not severe enough to deter them from poaching. In some countries, the penalties are so low that it is not even worth the effort to catch the poachers.
+
+Paragraph 5:
+The cost of poaching elephants is high. It is estimated that elephants are worth more than $1 million each to the tourism industry (14). This is because elephants are a major attraction for tourists. They are also an important part of the ecosystem. When elephants are poached, it has a negative impact on the environment and the economy.
+==============================================================
+
+
+Paragraph 1:
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory or about 60,000 per elephant(13). Ivory poaching is much more professional than it used to be (16). Poachers are now well equipped to catch the elephants using everything between rocket launchers and helicopters (16). Most recruits come from rural areas, and they are often hired by organized crime syndicates (16). Often even the military is involved in the poaching of elephants (16). 
+
+It is hard for law enforcement to catch the poachers (16). This is for a couple reasons. The first is once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)  Elephants are outside of reserves and are constantly crossing boarders (16). 
+
+Paragraph 2:
+The ivory is being sold to two different types of buyers. The first is the illegal trade market, where the ivory is smuggled and then sold on the black market (15). The second is the carving market (15). The ivory is turned into 
+
+, where the ivory is turned into trinkets and other objects (15). These objects are then sold to people like tourists who want to use the ivory for ornamental purposes. 
+
 
   It is estimated that poachers receive about $180 per exhibition (1). 
 
@@ -132,15 +196,31 @@ Might be useful:
 1. https://onlinelibrary.wiley.com/doi/epdf/10.2307/1244594?saml_referrer
    1. ECONOMICS OT ANTIPOACHING ENFORCEMENT AND THE IVORY TRADE BAN
 2. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0076539
+   1. Dissecting the Illegal Ivory Trade: An Analysis of Ivory Seizures Data
 3. https://www.animallaw.info/article/international-strategy-ivory-trade-ban-united-states-and-china#sintro
-Laws:
+   1. The (Inter)national Strategy: An Ivory Trade Ban In The United States And China
 4. https://www.animallaw.info/article/international-strategy-ivory-trade-ban-united-states-and-china#sintro
+   1. The (Inter)national Strategy: An Ivory Trade Ban In The United States And China
 5. https://www.federalregister.gov/documents/2016/06/06/2016-13173/endangered-and-threatened-wildlife-and-plants-revision-of-the-section-4d-rule-for-the-african?utm_campaign=subscription+mailing+list&utm_medium=email&utm_source=federalregister.gov
+   1. Endangered and Threatened Wildlife and Plants; Revision of the Section 4(d) Rule for the African Elephant (Loxodonta africana
 6. https://www.nationalgeographic.com/newsletters/animals/article/is-elephant-poaching-declining-june-25
+   1. Is elephant poaching really declining?
 7. https://conbio.onlinelibrary.wiley.com/doi/epdf/10.1111/cobi.12377?saml_referrer
+   1. Legal ivory trade in a corrupt world and its impact on African elephant populations
 8. https://link.springer.com/content/pdf/10.1007/s10745-004-6097-7.pdf
-9. https://cites.org/eng/news/pr/African_elephant_poaching_down_ivory_seizures_up_and_hit_record_high_24102017
+   1. The Human Ecology of World Systems in East Africa: The Impact of the Ivory Trade
+9.  https://cites.org/eng/news/pr/African_elephant_poaching_down_ivory_seizures_up_and_hit_record_high_24102017
+   2.  CITES: African elephant poaching down, ivory seizures up and hit record high
 10. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/fee.1325?casa_token=0ARyyjyH4BkAAAAA%3AR2LPO7naoeZZao9VQaOPRFOM4cND_bgj8OkqmTmSkJhyfMhZeohax1-5T3v0CDMy-mDP-qbGQB0LvQc
+    1.  Tools and terms for understanding illegal wildlife trade
 11. https://www.sciencedirect.com/science/article/pii/S2351989420306867
+    1.  Will legal international rhino horn trade save wild rhino populations?
 12. https://www.frontiersin.org/articles/10.3389/fdata.2019.00028/full
+    1.  Use of Machine Learning to Detect Wildlife Product Promotion and Sales on Twitter
 13. https://awionline.org/awi-quarterly/2013-winter/elephant-slaughter-escalates-illegal-ivory-market-thrives
+    1.  Elephant Slaughter Escalates as Illegal Ivory Market Thrives
+14. https://savetheelephants.org/wp-content/uploads/2016/11/2000IvoryMarketsAfrica.pdf
+    1.  Ivory markets in Africa
+15. https://academic.oup.com/bjc/article/49/4/451/325177?login=true
+    1.  The International Ban on Ivory Sales and its Effects on Elephant Poaching in Africa 
+16. https://ciaotest.cc.columbia.edu/journals/wpj/v30i2/f_0032841_26713.pdf
