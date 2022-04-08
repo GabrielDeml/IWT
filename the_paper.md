@@ -48,41 +48,12 @@ leveraged to identify trends and insights about wildlife trafficking.
  * What is the problem with their solutions?
  * 
 
-The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to National Geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. We are focusing on elephants, but it is being affected by IIT. It is also happening to the rhinos(11) and walruses. There have been some past attempts to address this issue by using a biterm clustering model (12). Using a clustering model inherently has a very low accuracy. In fact 4 out of 9 tweets they report as illegal ivory trade we do not agree with since the items being sold are referring to the color ivory or ivory lookalike(12). They were also limited by not having an initial dataset (12). We address these problems in two ways:
+The Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for: Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Even with bans in several countries, the African elephant is still being poached. According to National Geographic there are 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). The population of African elephants is decreasing by about 0.6% per year. We are focusing on elephants, but it is being affected by IIT. It is also happening to the rhinos(11) and walruses. There have been some past attempts to address this issue by using a biterm clustering model (12). Using a clustering model inherently has a very low accuracy. In fact, 4 out of 9 tweets they report as illegal ivory trade we do not agree with since the items being sold are referring to the color ivory or ivory lookalike(12). They were also limited by not having an initial dataset (12). We address these problems in two ways:
 * We built the largest ever dataset of IIT Tweets Our Dataset contains XX IIT Tweets.
 * Created the first BERT based model for IIT. This allowed us to obtain an accuracy of about XX%.
 
 Project Goal:
 There were two goals for this project. The first goal is to demonstrate that it is possible to automatically classify user generated content. We believe that this model could potentially be applied to a dynamic and high speed platform. This paper focuses on Twitter, but the same principles should apply to other platforms as well. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes post that are promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform setting out to implement such an algorithm. The second goal is to build a large enough dataset of IIT texts that such platforms can use it as a seed dataset. One of our biggest challenge was generating our initial dataset to seed the model. We believe that this dataset will be large enough to be used by researchers in the future.
-
-
-
- Our goal is to create a framework that would make it harder for sellers of IIT to find clients. We believe that if poachers have no clients, they have no incentive to participate in IIT. 
-
- We even found that 4 out of the 9 tweets they found were not actually ivory, but ivory replicas. Using our BERT we were able to identify IIT tweets with XX accuracy. This allows us to create a large dataset of IIT tweets that could be used by future researchers. 
-
-## Motivation 
-
-Example:
-The motivation behind this project arose from discussion with domain experts Patricia
-Raxter, PhD and Meredith Gore PhD, who emphasized the issue of wildlife trafficking especially
-within Africa. Patricia Raxter, PhD is a Subject Matter Expert on transnational wildlife crime.
-Meredith Gore, PhD is an associate professor at the University of Maryland whose expertise is in
-the human dimensions of wildlife management, and environment and resource policy.
-There is a need for an easy process to read through wildlife trafficking reports and media
-stories to find trends across illegal wildlife trade seizures. Currently this is a manual process, as
-investigators often have to sift through data manually. Experts interviewed acknowledged the
-current process is tedious and articles often are not shared between all the experts. Since the
-information in these briefings is disjointed it can be difficult for experts to parse through and
-identify insights. The reports, as seen in Figure 1, contain descriptions of wildlife trafficking
-seizures within different countries across a certain period.
-
-* Motivation:
- * What questions do we want to answer?
- * A brief review of the literature  
- * A short outline of the paper
-
-
 
 # Background
 
@@ -123,26 +94,29 @@ below in Figure 2.
 
 Paragraph 1:
  * Who poaches the elephants?
-   * 
+   *
 Paragraph 2:
  * Who is it being sold to?
+   * https://www.sciencedirect.com/science/article/pii/S0006320714003371?casa_token=jxfHglTOhI0AAAAA:DtE4ATQ7-t6Bd_P4n22P7TFnXRffCkoh9AFDibarJnjfDc4-j2X5j3YarHZfx3BpMw-XKJSX
 Paragraph 3:
  * What type of market would it go through?
 Paragraph 4:
 * What is the punishment given to the perpetrator?
+  * https://www.traffic.org/site/assets/files/2544/w-traps-elephant-rhino-report.pdf
 Paragraph 5:
  * What is the cost on the environment/economy?
    * https://www.nature.com/articles/s41467-019-09993-2
-   *  
 
-There is a monetary incentive for poaching elephants. It is estimated that poachers receive about $180 per exhibition (1)  
 
+
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13).  In other words, ivory is worth a lot. 
+
+  It is estimated that poachers receive about $180 per exhibition (1). 
 
 
 
 Notes:
 * Once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)
-* 
 
 
 
@@ -169,3 +143,4 @@ Laws:
 10. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/fee.1325?casa_token=0ARyyjyH4BkAAAAA%3AR2LPO7naoeZZao9VQaOPRFOM4cND_bgj8OkqmTmSkJhyfMhZeohax1-5T3v0CDMy-mDP-qbGQB0LvQc
 11. https://www.sciencedirect.com/science/article/pii/S2351989420306867
 12. https://www.frontiersin.org/articles/10.3389/fdata.2019.00028/full
+13. https://awionline.org/awi-quarterly/2013-winter/elephant-slaughter-escalates-illegal-ivory-market-thrives
