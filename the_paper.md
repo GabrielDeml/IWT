@@ -148,7 +148,7 @@ The cost of elephant poaching is high. It is estimated that the illegal trade in
 
 
 Paragraph 1:
-There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13). Poaching of elephants is often done by organized crime syndicates. There are many reasons for this but the most important is that there is a high demand for ivory. The syndicates are able to sell the ivory for a high price and they can make a large profit.
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory (13). Poaching of elephants is often done by organized crime syndicates. There are many reason for this but the most important is that there is a high demand for ivory. The syndicates are able to sell the ivory for a high price and they can make a large profit.
 
 Paragraph 2:
 The ivory is being sold to people who want to use it for ornamental purposes. The most common use for ivory is for making carved sculptures. It is also used for making jewellery, piano keys, and other decorative items. The demand for ivory is highest in Asia, especially in China. This is because there is a long history of using ivory in China. Ivory is seen as a symbol of wealth and status.
@@ -167,10 +167,21 @@ The cost of poaching elephants is high. It is estimated that elephants are worth
 Paragraph 1:
 There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street, it is worth about $6,000 per Kg of carved ivory or about 60,000 per elephant(13). Ivory poaching is much more professional than it used to be (16). Poachers are now well-equipped to catch the elephants, using everything between rocket launchers and helicopters (16). Most recruits come from rural areas, and they are often hired by organized crime syndicates (16). Often, even the military is involved in the poaching of elephants (16).
 
-It is hard for law enforcement to catch the poachers (16). This is for a couple of reasons. The first is once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)  Elephants are outside of reserves and are constantly crossing boarders (16).
+It is hard for law enforcement to catch the poachers (16). This is for a couple of reasons. The first is, once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)  Elephants are outside of reserves and are constantly crossing boarders (16).
 
 Paragraph 2:
-The ivory is being sold to two different types of buyers. The first is the illegal trade market, where the ivory is smuggled and then sold on the black market (15). The second is the carving market (15). The ivory is turned into
+The ivory on the black market is being sold in two different forms, raw and carved ivory. Raw ivory is often sold to  The second is the carving market (15). The ivory often turned into items such as pendants, rings, bangles, guru beads, and simple figurines (17).
+
+
+Paragraph 3:
+
+There are three different states of legality that ivory is often being sold in. White, black, and gray markets.
+
+The first is the white or legal markets (17). These are usually factories or retail outlets and are well established (17). All white markets must hold licenses for the ivory being sold and be operating within the law (17). The white markets are regulated by the government (17).
+
+The second, Black markets, are split up into two types online and unauthorized outlets (17). These markets are not regulated and unauthorized (17). In online markets, the seller usually directs the client to customer to contact them directly (17). They then sell and transfer the ivory to the buyer (17).
+
+For the third, Gray markets, the ivory is often sold in live auctions (17) The legality of these are questionable. They may be completely legit, but there is a good chance that they are not (17). The questionability comes from items claiming that they predate the ban on ivory harvesting (17).
 
 
 , where the ivory is turned into trinkets and other objects (15). These objects are then sold to people like tourists who want to use the ivory for ornamental purposes. 
@@ -228,3 +239,6 @@ Might be useful:
 15. https://academic.oup.com/bjc/article/49/4/451/325177?login=true
     1.  The International Ban on Ivory Sales and its Effects on Elephant Poaching in Africa 
 16. https://ciaotest.cc.columbia.edu/journals/wpj/v30i2/f_0032841_26713.pdf
+    1.  Rethinking Ivory: Why Trade in Tusks Won't Go Away
+17. https://www.sciencedirect.com/science/article/pii/S0006320714003371?casa_token=mPIoUMnwWKsAAAAA:SUYLf-WeIuLUkIFUx_WScNW9AVW9kMGYTidrIdNzMTBprz9xXk0h7qNvdnR5oj27X_dBo4jW
+    1.  Elephant ivory trade in China: Trends and drivers
