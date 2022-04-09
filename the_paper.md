@@ -170,7 +170,8 @@ There is a monetary incentive for poaching elephants. Each the ivory on a single
 It is hard for law enforcement to catch the poachers (16). This is for a couple of reasons. The first is, once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)  Elephants are outside of reserves and are constantly crossing boarders (16).
 
 Paragraph 2:
-The ivory on the black market is being sold in two different forms, raw and carved ivory. Raw ivory is often sold to  The second is the carving market (15). The ivory often turned into items such as pendants, rings, bangles, guru beads, and simple figurines (17).
+The ivory on the black market is being sold in two different forms, raw and carved ivory. It also goes through several people before being sold to the end consumer (14). The poachers are the first people in the chain. They take the ivory, sell it to carvers(14). In this stage, the ivory is in a raw form (14). Carvers are the second people in the chain. They are the artisans who take the ivory and carve it into works of art (14). The ivory often turned into items such as pendants, rings, bangles, guru beads, and simple figurines (17). From there, a trader is the third person in the chain. In this stage, the ivory is carved. The traders are the people who sell the ivory to the end consumer (14).
+
 
 
 Paragraph 3:
@@ -183,11 +184,6 @@ The second, Black markets, are split up into two types online and unauthorized o
 
 For the third, Gray markets, the ivory is often sold in live auctions (17) The legality of these are questionable. They may be completely legit, but there is a good chance that they are not (17). The questionability comes from items claiming that they predate the ban on ivory harvesting (17).
 
-
-, where the ivory is turned into trinkets and other objects (15). These objects are then sold to people like tourists who want to use the ivory for ornamental purposes. 
-
-
-  It is estimated that poachers receive about $180 per exhibition (1). 
 
 
 
@@ -225,7 +221,7 @@ Might be useful:
 8. https://link.springer.com/content/pdf/10.1007/s10745-004-6097-7.pdf
    1. The Human Ecology of World Systems in East Africa: The Impact of the Ivory Trade
 9.  https://cites.org/eng/news/pr/African_elephant_poaching_down_ivory_seizures_up_and_hit_record_high_24102017
-   2.  CITES: African elephant poaching down, ivory seizures up and hit record high
+    1. CITES: African elephant poaching down, ivory seizures up and hit record high
 10. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/fee.1325?casa_token=0ARyyjyH4BkAAAAA%3AR2LPO7naoeZZao9VQaOPRFOM4cND_bgj8OkqmTmSkJhyfMhZeohax1-5T3v0CDMy-mDP-qbGQB0LvQc
     1.  Tools and terms for understanding illegal wildlife trade
 11. https://www.sciencedirect.com/science/article/pii/S2351989420306867
