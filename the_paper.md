@@ -165,12 +165,13 @@ The cost of poaching elephants is high. It is estimated that elephants are worth
 
 
 Paragraph 1:
-There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street it is worth about $6,000 per Kg of carved ivory or about 60,000 per elephant(13). Ivory poaching is much more professional than it used to be (16). Poachers are now well equipped to catch the elephants using everything between rocket launchers and helicopters (16). Most recruits come from rural areas, and they are often hired by organized crime syndicates (16). Often even the military is involved in the poaching of elephants (16). 
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street, it is worth about $6,000 per Kg of carved ivory or about 60,000 per elephant(13). Ivory poaching is much more professional than it used to be (16). Poachers are now well-equipped to catch the elephants, using everything between rocket launchers and helicopters (16). Most recruits come from rural areas, and they are often hired by organized crime syndicates (16). Often, even the military is involved in the poaching of elephants (16).
 
-It is hard for law enforcement to catch the poachers (16). This is for a couple reasons. The first is once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)  Elephants are outside of reserves and are constantly crossing boarders (16). 
+It is hard for law enforcement to catch the poachers (16). This is for a couple of reasons. The first is once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)  Elephants are outside of reserves and are constantly crossing boarders (16).
 
 Paragraph 2:
-The ivory is being sold to two different types of buyers. The first is the illegal trade market, where the ivory is smuggled and then sold on the black market (15). The second is the carving market (15). The ivory is turned into 
+The ivory is being sold to two different types of buyers. The first is the illegal trade market, where the ivory is smuggled and then sold on the black market (15). The second is the carving market (15). The ivory is turned into
+
 
 , where the ivory is turned into trinkets and other objects (15). These objects are then sold to people like tourists who want to use the ivory for ornamental purposes. 
 
@@ -181,6 +182,9 @@ The ivory is being sold to two different types of buyers. The first is the illeg
 
 Notes:
 * Once ivory enters the supply chain, it is not hard to know if it is legal or not. (7)
+
+
+# Related Work
 
 
 
