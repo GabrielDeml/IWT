@@ -165,13 +165,14 @@ The cost of poaching elephants is high. It is estimated that elephants are worth
 
 
 Paragraph 1:
-There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street, it is worth about $6,000 per Kg of carved ivory or about 60,000 per elephant(13). Ivory poaching is much more professional than it used to be (16). Poachers are now well-equipped to catch the elephants, using everything between rocket launchers and helicopters (16). Most recruits come from rural areas, and they are often hired by organized crime syndicates (16). Often, even the military is involved in the poaching of elephants (16).
+There is a monetary incentive for poaching elephants. Each the ivory on a single elephant is worth about $18,000 or about $1,800 per kg (13). Even that is just the wholesale value on the street, it is worth about $6,000 per Kg of carved ivory or about 60,000 per elephant(13). African ivory is more valuable than Asian ivory since Asian ivory yellows over time(19). Ivory poaching is much more professional than it used to be (16). Poachers are now well-equipped to catch the elephants, using everything between rocket launchers and helicopters (16). Most recruits come from rural areas, and they are often hired by organized crime syndicates (16). Often, even the military is involved in the poaching of elephants (16).
 
 It is hard for law enforcement to catch the poachers (16). This is for a couple of reasons. The first is, once ivory enters the supply chain, it is not hard to know if it is legal or not (7).i  Elephants are outside of reserves and are constantly crossing boarders (16).
 
 Paragraph 2:
 The ivory on the black market is being sold in two different forms, raw and carved ivory. It also goes through several people before being sold to the end consumer (14). The poachers are the first people in the chain. They take the ivory, sell it to carvers(14). In this stage, the ivory is in a raw form (14). Carvers are the second people in the chain. They are the artisans who take the ivory and carve it into works of art (14). The ivory often turned into items such as pendants, rings, bangles, guru beads, and simple figurines (17). From there, a trader is the third person in the chain. In this stage, the ivory is carved. The traders are the people who sell the ivory to the end consumer (14).
 
+Consumers want ivory for a couple reasons. The first is ivory is often used in traditional chinese medicine (17). They believe that the ivory will remove toxins from the body (17). The second reason is decorative purposes either as jewelry or ornamental (17). The third is as an investment. Some think that the price of ivory will continue to rise thus making it a good investment (17). Lastly, it has religious significance. The ivory is made believed to bring good fortune and it is made of in intelligence (17). 
 
 Paragraph 3:
 
@@ -183,6 +184,11 @@ The second, Black markets, are split up into two types online and unauthorized o
 
 For the third, Gray markets, the ivory is often sold in live auctions (17) The legality of these are questionable. They may be completely legit, but there is a good chance that they are not (17). The questionability comes from items claiming that they predate the ban on ivory harvesting (17).
 
+Paragraph 4:
+
+It is hard to quantify the punishment for poaching elephants or trading ivory since there are so many different countries involved. Also, some countries are corrupt so the laws are not enforced (19). The punishment for poaching elephants ranges from a couple thousand dollars to a lifetime in prison (19). Generally though, the punishment is towards a couple thousand dollars side of the spectrum (19). 
+
+Paragraph 5:
 
 
 
@@ -237,3 +243,7 @@ Might be useful:
     1.  Rethinking Ivory: Why Trade in Tusks Won't Go Away
 17. https://www.sciencedirect.com/science/article/pii/S0006320714003371?casa_token=mPIoUMnwWKsAAAAA:SUYLf-WeIuLUkIFUx_WScNW9AVW9kMGYTidrIdNzMTBprz9xXk0h7qNvdnR5oj27X_dBo4jW
     1.  Elephant ivory trade in China: Trends and drivers
+18. https://www.traffic.org/site/assets/files/2544/w-traps-elephant-rhino-report.pdf
+    1.  ILLEGAL TRADE IN IVORY AND RHINO HORN
+19. https://www.animallaw.info/article/detailed-discussion-elephants-and-ivory-trade
+    1.  Detailed Discussion of Elephants and the Ivory Trade
