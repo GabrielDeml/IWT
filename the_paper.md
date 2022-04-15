@@ -188,8 +188,6 @@ Paragraph 4:
 
 It is hard to quantify the punishment for poaching elephants or trading ivory since there are so many countries involved. Also, some countries are corrupt, so the laws are not enforced (19). The punishment for poaching elephants ranges from a couple of thousand dollars to a lifetime in prison (19). Generally the punishment is towards a couple of thousand dollars side of the spectrum (19).
 
-
-
 Paragraph 5:
 
 
@@ -200,6 +198,7 @@ Notes:
 
 # Related Work
 
+There is one paper is particularly relevant to this paper. 
 
 
 
