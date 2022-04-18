@@ -147,29 +147,23 @@ There is one paper is particularly relevant to this paper.
 
 # Methodology
 
-Phase 1:
-* Create a dataset large enough to seed the BERT model. 
-Phase 2:    
-* 
-
-We had a chicken and egg problem. We needed to create a dataset to train the BERT model, but without the model it was hard to create the dataset. We had four ways that we worked around this problem. 
-* Nine seed tweets from X paper. 
+There was no existing dataset large enough to train a large model like BERT. This left us in a chicken and egg problem. We needed a powerful model to filter through large numbers of tweets to build the dataset, but we needed the dataset to create the model. We had four ways that we worked around this problem.
+* Nine seed tweets from X paper.
 * Building a temporary BERT model.
 * Making assumptions about twitter groups.
 * Keyword search.
 
 
 
-We got nine seed tweets from the X paper. They are what we seeded the original BERT model. We also used a few tweets that we found by manually searching for keywords. As negative examples we used random users tweets that we manually scanned to make sure that they were not IIT.  This worked out to be total of X tweets. This was a very crude way of getting the seed tweets, but given the chicken and egg problem, we didn't see a better way.
+We got nine seed tweets from the X paper. They are what we seeded the original BERT model. We also used a few tweets that we found by manually searching for keywords. As for negative examples, we used random users tweets that we manually scanned to make sure that they were not IIT.  This worked out to be a total of X tweets. This was a very crude way of getting the seed tweets, but given the chicken and egg problem, we didn't see a better way.
 
-Using these seed tweets we were able to build 
+Using these seed tweets, we were able to build an initial BERT model. We were not trying to build an accurate model, but rather a model that we could use to create a dataset. We used the BERT model to create a dataset that we could use to train its self after human labeling.
 
-For an initial set of tweets for the model to search through, we didn't just use random tweets. We wanted to give the model the best chance of finding IIT. We found some rudimentary evidence that followers of the seed users also sold IIT. Since we knew that the seed users were IIT sellers we used their followers timelines. We latter found out that not all of the seed tweets were IIT which we will discuss this in detail later, but at the time we thought that they were IIT. There were X followers and we took the first X tweets from each follower. This is the tweet collection we will use for the model.
+For an initial set of tweets for the model to search through, we didn't just use random tweets. We wanted to give the model the best chance of finding IIT. We found some rudimentary evidence that followers of the seed users also sold IIT. Since we knew that the seed users were IIT sellers, we used their followers' timelines. We later found out that not all of the seed tweets contained IIT, which we will discuss this in detail later, but at the time we thought that they were IIT. There were X followers, and we took the first X tweets from each follower. This is the tweet collection we will use for the model.
 
+The tweets that the model returned as potentially IIT were then filtered by the keyword ivory. Filtered out around X% of the tweets.  
 
-
- Using this dataset we were able to train a BERT model. 
-
+# Results
 
 
 
