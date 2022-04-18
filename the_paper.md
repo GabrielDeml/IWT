@@ -147,20 +147,23 @@ There is one paper is particularly relevant to this paper.
 
 # Methodology
 
-Example: 
-This project was divided into three phases as shown in Figure 5. The first phase was to
-create a custom natural language processing (NLP) pipeline using spaCy (SpaCy, 2021) to
-process EAGLE reports and apply named entity recognition (NER) and relation extraction to
-identify information valuable to wildlife trafficking analysts. The second phase was creating a
-database to organize and store the extracted information. The third phase was to effectively
-visualize the contents of the database (Tableau, 2021).
-
 Phase 1:
 * Create a dataset large enough to seed the BERT model. 
 Phase 2:    
 * 
 
+We had a chicken and egg problem. We needed to create a dataset to train the BERT model, but without the model it was hard to create the dataset. We had four ways that we worked around this problem. 
+* Nine seed tweets from X paper. 
+* Making assumptions about twitter groups.
+* Keyword search.
+* Building a temporary BERT model.
 
+
+We got nine seed tweets from the X paper. They are what we seeded the original BERT model. We also used a few tweets that we found by manually searching for keywords. As negative examples we used random users tweets that we manually scanned to make sure that they were not IIT.  This worked out to be total of X tweets. This was a very crude way of getting the seed tweets, but given the chicken and egg problem, we didn't see a better way.
+
+For an initial set of tweets for the model to search through, we didn't just use random tweets. We wanted to give the model the best chance of finding IIT. We found some rudimentary evidence that followers of the seed users also sold IIT. Since we knew that the seed users were IIT sellers we used their followers timelines. We latter found out that not all of the seed tweets were IIT which we will discuss this in detail later, but at the time we thought that they were IIT. There were X followers and we took the first X tweets from each follower. 
+
+ Using this dataset we were able to train a BERT model. 
 
 
 
