@@ -151,7 +151,11 @@ There were two main stages for this paper. The first was filtering through enoug
 
 Our starting point was 9 IIT Tweets from X paper. We latter realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets we manually went through the first 100 tweets in their timeline. This gave us another 62 tweets to add to our dataset totaling 71 tweets. 
 
-We had a chicken and egg problem. We needed a way to further expand the dataset, but didn't have enough data to train a classifier collected 52911 tweets from the seed users followers timelines. We found some rudimentary evidence that followers of the seed users also sold IIT which we will discuss latter. We needed a classifier that would be able to classify that many tweets, but we didn't have enough data to train a classifier. 
+We needed a way to further expand the dataset. Finding IIT is essentially like looking through a needle in a haystack so manually going though every tweet would have been imposable. We needed a way to automatically classify tweets. The tweets that the model had the highest confendence in then could be manually labeled by a human. We came up with four ways to solve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
+
+To start, we needed a corpus of tweets that we thought to have a higher likely hood of containing IIT. We wondered if the followers of the 9 IIT sellers from paper X would also be selling IIT. This intuitively would make sense since groups of people tend to follow each other. We collected the first 100 tweets from all of the 9 seed users followers. The number of followers worked out to be X. Since not all of the followers posted 100 tweets we ended up with 52,911 individual tweets. We then filtered for the keyword of ivory. This left us with X number of tweets. 
+
+, but didn't have enough data to train the classifier needed to filter though a large dataset.  ecollected 52911 tweets from the seed users followers timelines. We found some rudimentary evidence that followers of the seed users also sold IIT which we will discuss latter. We needed a classifier that would be able to classify that many tweets, but we didn't have enough data to train a classifier. 
 This gave us enough tweets that we were able to try fine tuning BERT.   
 
 
