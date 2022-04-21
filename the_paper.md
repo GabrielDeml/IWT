@@ -149,7 +149,10 @@ There is one paper is particularly relevant to this paper.
 
 There were two main stages for this paper. The first was filtering through enough data to create a dataset. The second was showing that given the dataset we could build an accurate model.
 
-Our starting point was 9 IIT Tweets from X paper. We latter realized that 4 of them were not IIT which we will discuss in detail later. We manually went through the users timeline for those 9 tweets that contained suspicious words that we got from X.
+Our starting point was 9 IIT Tweets from X paper. We latter realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets we manually went through the first 100 tweets in their timeline. This gave us another 62 tweets to add to our dataset totaling 71 tweets. 
+
+We had a chicken and egg problem. We needed a way to further expand the dataset, but didn't have enough data to train a classifier collected 52911 tweets from the seed users followers timelines. We found some rudimentary evidence that followers of the seed users also sold IIT which we will discuss latter. We needed a classifier that would be able to classify that many tweets, but we didn't have enough data to train a classifier. 
+This gave us enough tweets that we were able to try fine tuning BERT.   
 
 
 There was no existing dataset large enough to train a large model like BERT. This left us in a chicken and egg problem. We needed a powerful model to filter through large numbers of tweets to build the dataset, but we needed the dataset to create the model. We had four ways that we worked around this problem. 
