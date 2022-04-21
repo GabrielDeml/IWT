@@ -147,29 +147,32 @@ There is one paper is particularly relevant to this paper.
 
 # Methodology
 
-There were two main stages for this paper. The first was filtering through enough data to create a dataset. The second was showing that given the dataset we could build an accurate model.
+There were two main stages for this paper. The first was filtering through enough data to create a dataset. The second was showing that given the dataset, we could build an accurate model.
 
-Our starting point was 9 IIT Tweets from X paper. We latter realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets we manually went through the first 100 tweets in their timeline. This gave us another 62 tweets to add to our dataset totaling 71 tweets. 
+Our starting point was 9 IIT Tweets from X paper. Upon further investigation, we realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 71 IIT tweets.
 
-We needed a way to further expand the dataset. Finding IIT is essentially like looking through a needle in a haystack so manually going though every tweet would have been imposable. We needed a way to automatically classify tweets. The tweets that the model had the highest confendence in then could be manually labeled by a human. We came up with four ways to solve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
+We needed a way to further expand the dataset. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to automatically classify tweets. The tweets that the model had the highest confidence in could be manually labeled by a human. We came up with four ways to resolve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
 
-To start, we needed a corpus of tweets that we thought to have a higher likely hood of containing IIT. We wondered if the followers of the 9 IIT sellers from paper X would also be selling IIT. This intuitively would make sense since groups of people tend to follow each other. We collected the first 100 tweets from all of the 9 seed users followers. The number of followers worked out to be X. Since not all of the followers posted 100 tweets we ended up with 52,911 individual tweets. We then filtered for the keyword of ivory. This left us with X number of tweets. We then manually went though and found X IIT tweets. This demonstrated that the followers did have some IIT tweets. 
+To start, we needed a corpus of tweets that we thought to have a higher likelihood of containing IIT. We wondered if the followers of the 9 IIT sellers from paper X would also be selling IIT. This intuitively would make sense, since groups of people tend to follow each other. We collected the first 100 tweets from all the 9 seed users' followers. The number of followers worked out to be X. Since not all the followers posted 100 tweets, we ended up with 52,911 individual tweets. We then filtered for the keyword of ivory. This left us with X number of tweets. We then manually went through and found X IIT tweets. This demonstrated that the followers did have some IIT tweets.
 
-To get more tweets we decided to try training a BERT model. We knew that the model would not be accurate, but we thought that it would help filter out non IIT Tweets. For a model we used the huggingface uncased BERT model. We figured that we could then manually go through the tweets that the model was most confident in and filtered by the keyword ivory. If we found tweets that were IIT, we would add them to the dataset. We repeated this process 4 times. Each time we would add the tweets that the previous model found. We also varied the negative examples. We added the false positive from the previous model. We also tried adding negative examples from random users. The number of negative examples varied from a couple hundred to a couple thousand. We realized that having many more negative examples biassed the model to predict negative results. If the model was not biased, then we would have had a harder time manually going through the tweets due to the sheer number of tweets.
+To get more tweets, we decided to try training a BERT model. We knew that the model would not be accurate, but we thought that it would help filter out non IIT Tweets. For a model we used the huggingface uncased BERT model. We figured that we could then manually go through the tweets that the model was most confident in and filtered by the keyword ivory. If we found tweets that were IIT, we would add them to the dataset. We repeated this process 4 times. Each time we would add the tweets that the previous model found. We also varied the negative examples. We added the false positive from the previous model. We also tried adding negative examples from random users. The number of negative examples varied from a couple hundred to a couple thousand. We realized that having many more negative examples biased the model to predict negative results. If the model was not biased, then we would have had a harder time manually going through the tweets due to the sheer number of tweets.
+
+After the 4 iterations, we had a dataset of 168 unique IIT tweets.
+
+We needed to formalize the dataset so that we could demonstrate that it was possible to build a model that could accurately classify IIT tweets.
+
+Our initial dataset came from four sources:
+* 168 tweets we thought contained IIT
+* 240 tweets from random users that we thought were not IIT
+* 131 tweets that one of the models got as a false positive
+* 100 tweets that we thought were good from seed users.
+
+This totaled 515 initial number of tweets.
+
+Before labeling the dataset, we needed to clean the text. We wanted to respect the user's privacy and stay within the twitters terms of service, so we needed to make it harder for the labelers to find the original tweets.
 
 
-
-The tweets that the model returned as potentially IIT were then filtered by the keyword ivory. Filtered out around X% of the tweets. 
-
-Before labeling all text in the dataset was cleaned using the following steps:
-* Replace all URLs with a {{URL}} token.
-* Replace all @mentions with a {{MENTION}} token.
-* Replace all emaill addresses with a {{EMAIL}} token.
-* Removing all tweets that were not in English.
-* Removing all tweets that have duplicate tweet IDs.
-  * There were some duplicate texts that were not removed. We latter removed them before training the model.
-* Replaced all tweet ids with fake tweet ids so that the labelers would have a harder time finding the original tweet.
-  * We created a mapping between the original tweet ids and the fake tweet ids.
+After cleaning the dataset we had a dataset of
 
 The dataset was then converted to a CSV file to upload to Google Drive to share with the labelers. The CSV was in the following format:
 *Fake Tweet ID, Tweet Text, User description, labelers label*
