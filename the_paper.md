@@ -147,11 +147,12 @@ There is one paper is particularly relevant to this paper.
 
 # Methodology
 
-There was no existing dataset large enough to train a large model like BERT. This left us in a chicken and egg problem. We needed a powerful model to filter through large numbers of tweets to build the dataset, but we needed the dataset to create the model. We had four ways that we worked around this problem.
-* Nine seed tweets from X paper.
-* Building a temporary BERT model.
-* Making assumptions about twitter groups.
-* Keyword search.
+There were two main stages for this paper. The first was filtering through enough data to create a dataset. The second was showing that given the dataset we could build an accurate model.
+
+Our starting point was 9 IIT Tweets from X paper. We latter realized that 4 of them were not IIT which we will discuss in detail later. We manually went through the users timeline for those 9 tweets that contained suspicious words that we got from X.
+
+
+There was no existing dataset large enough to train a large model like BERT. This left us in a chicken and egg problem. We needed a powerful model to filter through large numbers of tweets to build the dataset, but we needed the dataset to create the model. We had four ways that we worked around this problem. 
 
 
 
@@ -161,10 +162,112 @@ Using these seed tweets, we were able to build an initial BERT model. We were no
 
 For an initial set of tweets for the model to search through, we didn't just use random tweets. We wanted to give the model the best chance of finding IIT. We found some rudimentary evidence that followers of the seed users also sold IIT. Since we knew that the seed users were IIT sellers, we used their followers' timelines. We later found out that not all of the seed tweets contained IIT, which we will discuss this in detail later, but at the time we thought that they were IIT. There were X followers, and we took the first X tweets from each follower. This is the tweet collection we will use for the model.
 
-The tweets that the model returned as potentially IIT were then filtered by the keyword ivory. Filtered out around X% of the tweets.  
+The tweets that the model returned as potentially IIT were then filtered by the keyword ivory. Filtered out around X% of the tweets. 
+
+Before labeling all text in the dataset was cleaned using the following steps:
+* Replace all URLs with a {{URL}} token.
+* Replace all @mentions with a {{MENTION}} token.
+* Replace all emaill addresses with a {{EMAIL}} token.
+* Removing all tweets that were not in English.
+* Removing all tweets that have duplicate tweet IDs.
+  * There were some duplicate texts that were not removed. We latter removed them before training the model.
+* Replaced all tweet ids with fake tweet ids so that the labelers would have a harder time finding the original tweet.
+  * We created a mapping between the original tweet ids and the fake tweet ids.
+
+The dataset was then converted to a CSV file to upload to Google Drive to share with the labelers. The CSV was in the following format:
+*Fake Tweet ID, Tweet Text, User description, labelers label*
+
+The labelers label is a binary value. 1 means that the tweet is IIT, and 0 means that it is not IIT.
+
+The labelers were also given to the images associated with the tweets. Sometimes there were more than one image per tweet and other times there were none. All tweets were labeled with fake tweet id followed by an image counter for that tweet id. This allowed the labelers to look at the images while labeling the tweets. 
+
+
+The criteria that the labelers used to label the tweets were:
+* The item looks like it could potentially be bought 
+  * The user says to go to their website to buy it  
+  * The user says to contact them for details
+  * The user is a business that the item can be bought at based on the user description, E.g. auctioneer, antique dealer
+* The person is trying to or already bought ivory
+  * The user is asking buy ivory
+  * The user said that they bought a piece of ivory
+* Not selling an item, but pointing users to a website place to buy/sell ivory  
+  * Buy ivory at this website
+  * Buy ivory at this location
+* The item is ivory
+  * The user claims it is made of ivory and the item could potentially be made of ivory
+  * The item has schreger lines in the image and looks like ivory
+
+
+We used three labelers to label the tweets.
+
+Once the labelers had labeled all the tweets in the dataset, we used the following steps to create the dataset:
+* Combine all tweet's labels by adding them together. 
+* If 
+
+
+
+
+
+
+
+We decided to u
+
+BERT model
+Model that is being used
+Hyperparameters
+Token length
+Ten-fold results
+What tokenizer is being used
+Custom words
+
+
+Dataset
+What the final split ended up being
+What our agreement ratio is
+How many tweets are in the dataset
+How the dataset was cleaned
+What format the dataset is stored in
+The token length for each result
+How the strings were put together for the user description/OCR
+
 
 # Results
 
+Classification reports
+Which component is useful
+
+First part is the best 
+
+What needs to go in
+The final scores of the model
+How the data was cleaned/prepared
+What OCR was used
+
+
+Talk about whether text/user/ocr is better
+
+Followers were selling IIT 
+https://docs.google.com/presentation/d/1gzPUlcziiGEmOf_Mx2C0TlcWHTWMnB6cIyZkayEW0wU/edit#slide=id.g10f0465fa01_0_2
+https://docs.google.com/presentation/d/1rQ46gBQMZT4DFS7VAlO30CEwS22B2gNyk_FBatZnBTk/edit#slide=id.g10f0465fa01_0_2
+
+
+
+BERT model
+Model that is being used
+Hyperparameters
+Token length
+Ten-fold results
+What tokenizer is being used
+Custom words
+
+Dataset
+What the final split ended up being
+What our agreement ratio is
+How many tweets are in the dataset
+How the dataset was cleaned
+What format the dataset is stored in
+The token length for each result
+How the strings were put together for the user description/OCR
 
 
 
