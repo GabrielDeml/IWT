@@ -149,8 +149,6 @@ There is one paper is particularly relevant to this paper.
 
 In this section, we will discuss three things. First, we will talk about filtering through the corpus of tweets to create the dataset. Secondly, the creation and cleaning of the dataset. Thirdly, we will discuss the creation of the model.
 
-There were two main stages for this paper. The first was filtering through enough data to create a dataset. The second was showing that given the dataset, we could build an accurate model.
-
 Our starting point was 9 IIT Tweets from X paper. Upon further investigation, we realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 71 IIT tweets.
 
 We needed a way to further expand the dataset since fine tuning models like BERT require lots of training data. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to automatically classify tweets. The tweets that the model had the highest confidence in could be manually labeled by a human. We came up with four ways to resolve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
@@ -214,6 +212,11 @@ The dataset was labeled by three volunteers. Labeling happened in two stages. Th
 
 The final dataset had 315 tweets without IIT and 177 tweets with IIT totaling 492 tweets.
 
+The dataset then needed to be be cleaned a second time before being converted to a format that the model could understand. The dataset was cleaned in the following steps:
+* Remove all &amp; characters. These were fragments of HTML that were not removed.
+* Remove all Tweets with duplicate text. Some duplicate tweets were not removed before labeling because they had different tweet ids which we were checking for.
+
+We wanted to try training the model on three variations of the dataset. The first variation with just the tweets text. The second variation with the tweets text and the user description. The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images. 
 
 
 
