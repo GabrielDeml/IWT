@@ -208,17 +208,17 @@ The criteria that the labelers used to label the tweets were:
   * The item has schreger lines in the image and looks like ivory
 
 
-The dataset was labeled by three volunteers. Labeling happened in two stages. The first stage was each labeler labeled each tweet individually. The labels from all three labelers agreed 85.8% of the time from this stage. In the second stage the labelers worked together.  When the labelers disagreed on a tweet, each person would explain why they picked a label they did. The labelers then relabeled the tweet if they decided that the argument changed their opinion. After stage 2, the labelers agreed on 99.6% of the tweets. There were only two tweets that the labelers disagreed on. The final labels for these tweets were decided by majority voting.
+The dataset was labeled by three volunteers. Labeling happened in two stages. The first stage was each labeler labeled each tweet individually. The labels from all three labelers agreed 85.8% of the time from this stage. In the second stage, the labelers worked together.  When the labelers disagreed on a tweet, each person would explain why they picked a label they did. The labelers then relabeled the tweet if they decided that the argument changed their opinion. After stage 2, the labelers agreed on 99.6% of the tweets. There were only two tweets that the labelers disagreed on. The final labels for these tweets were decided by majority voting.
 
 The final dataset had 315 tweets without IIT and 177 tweets with IIT totaling 492 tweets.
 
-The dataset then needed to be be cleaned a second time before being converted to a format that the model could understand. The dataset was cleaned in the following steps:
+The dataset then needed to be cleaned a second time before being converted to a format that the model could understand. The dataset was cleaned in the following steps:
 * Remove all &amp; characters. These were fragments of HTML that were not removed.
 * Remove all Tweets with duplicate text. Some duplicate tweets were not removed before labeling because they had different tweet ids which we were checking for.
 
-We wanted to try training the model on three variations of the dataset. The first variation with just the tweets text. The second variation with the tweets text and the user description. The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images. 
+We wanted to try training the model on three variations of the dataset. The first variation, with just the tweets text. The second variation with the tweets text and the user description. The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images. 
 
-
+The first variation with just the tweets text was used to train the model. 
 
 The second stage was each labeler labeled the tweets in groups. The first stage was done in groups of 10 tweets. The second stage was done in groups of 20 tweets. 
 
