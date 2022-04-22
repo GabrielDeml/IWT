@@ -218,7 +218,9 @@ The dataset then needed to be cleaned a second time before being converted to a 
 
 We wanted to try training the model on three variations of the dataset. The first variation, with just the tweets text. The second variation with the tweets text and the user description. The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images. 
 
-The first variation with just the tweets text was used to train the model. 
+The first variation with just the tweets text was used to train the model. We used a train, validation, and test split of 80%, 10%, and 10% respectively. The data was split using a stratified split. The token length was set to 95 since that was the max token length in the dataset. The model was run on a tenfold cross validation. The model was trained on the training data and tested on the test data. The model was then saved.
+
+The second variation with the tweets text and the user description was used to train the model. In between the text and user description we added the token [sep] to tell the model we were transitioning to the next section of the dataset. If there was no user description (not all Twitter users have descriptions), we put [nodes] which we added as a custom token to the model.   We used a train, validation, and test split of 80%, 10%, and 10% respectively. The data was split using a stratified split. The token length was set to 137 since that was the max token length in the dataset. The model was run on a tenfold cross validation. The model was trained on the training data and tested on the test data. The model was then saved.
 
 The second stage was each labeler labeled the tweets in groups. The first stage was done in groups of 10 tweets. The second stage was done in groups of 20 tweets. 
 
