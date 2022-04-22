@@ -147,6 +147,8 @@ There is one paper is particularly relevant to this paper.
 
 # Methodology
 
+In this section, we will discuss three things. First, we will talk about filtering through the corpus of tweets to create the dataset. Secondly, the creation and cleaning of the dataset. Thirdly, we will discuss the creation of the model.
+
 There were two main stages for this paper. The first was filtering through enough data to create a dataset. The second was showing that given the dataset, we could build an accurate model.
 
 Our starting point was 9 IIT Tweets from X paper. Upon further investigation, we realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 71 IIT tweets.
@@ -170,6 +172,7 @@ Our initial dataset came from four sources:
 This totaled 515 initial number of tweets.
 
 Before labeling the dataset, we needed to clean the text. We wanted to respect the user's privacy and stay within the twitters terms of service, so we needed to make it harder for the labelers to find the original tweets.
+
 
 
 After cleaning the dataset we had a dataset of
