@@ -153,7 +153,7 @@ There were two main stages for this paper. The first was filtering through enoug
 
 Our starting point was 9 IIT Tweets from X paper. Upon further investigation, we realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 71 IIT tweets.
 
-We needed a way to further expand the dataset. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to automatically classify tweets. The tweets that the model had the highest confidence in could be manually labeled by a human. We came up with four ways to resolve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
+We needed a way to further expand the dataset since fine tuning models like BERT require lots of training data. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to automatically classify tweets. The tweets that the model had the highest confidence in could be manually labeled by a human. We came up with four ways to resolve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
 
 To start, we needed a corpus of tweets that we thought to have a higher likelihood of containing IIT. We wondered if the followers of the 9 IIT sellers from paper X would also be selling IIT. This intuitively would make sense, since groups of people tend to follow each other. We collected the first 100 tweets from all the 9 seed users' followers. The number of followers worked out to be X. Since not all the followers posted 100 tweets, we ended up with 52,911 individual tweets. We then filtered for the keyword of ivory. This left us with X number of tweets. We then manually went through and found X IIT tweets. This demonstrated that the followers did have some IIT tweets.
 
@@ -167,23 +167,32 @@ Our initial dataset came from four sources:
 * 168 tweets we thought contained IIT
 * 240 tweets from random users that we thought were not IIT
 * 131 tweets that one of the models got as a false positive
-* 100 tweets that we thought were good from seed users.
+* 100 tweets that we thought were good from seed users
 
 This totaled 515 initial number of tweets.
 
-Before labeling the dataset, we needed to clean the text. We wanted to respect the user's privacy and stay within the twitters terms of service, so we needed to make it harder for the labelers to find the original tweets.
+Before labeling the dataset, we needed to clean the text. We wanted to respect the user's privacy so we needed to make it harder for the labelers to find the original tweets. There was a second motivation for cleaning the dataset. We wanted to make it easier for the model to learn from the dataset by adding special tokens.
+
+Before labeling all text in the dataset was cleaned using the following steps:
+* Replace all URLs with a {{URL}} token.
+* Replace all @mentions with a {{MENTION}} token.
+* Replace all email addresses with a {{EMAIL}} token.
+* Removing all tweets that were not in English.
+* Removing all tweets that have duplicate tweet IDs.
+  * There were some duplicate texts that were not removed. We latter removed them before training the model.
+* Replaced all tweet ids with fake tweet ids so that the labelers would have a harder time finding the original tweet.
+  * We created a mapping between the original tweet ids and the fake tweet ids.
 
 
-
-After cleaning the dataset we had a dataset of
-
-The dataset was then converted to a CSV file to upload to Google Drive to share with the labelers. The CSV was in the following format:
+The dataset was then converted to a CSV file to upload to share with the labelers. The CSV was in the following format:
 *Fake Tweet ID, Tweet Text, User description, labelers label*
 
-The labelers label is a binary value. 1 means that the tweet is IIT, and 0 means that it is not IIT.
+* Fake Tweet ID: The fake tweet id that was created to make it harder for the labelers to find the original tweet.
+* Tweet Text: The text of the tweet.
+* User description: The description of the user from their Twitter profile.
+* Labelers Label: The label that the labeler gave to the tweet in a binary value. 1 means that the tweet is IIT, and 0 means that it is not IIT.
 
-The labelers were also given to the images associated with the tweets. Sometimes there were more than one image per tweet and other times there were none. All tweets were labeled with fake tweet id followed by an image counter for that tweet id. This allowed the labelers to look at the images while labeling the tweets. 
-
+The labelers were also given the images associated with the tweets. Sometimes there were more than one image per tweet and other times there were none. All tweets were labeled with fake tweet id followed by an image counter for that tweet id. This allowed the labelers to look at the images while labeling the tweets. 
 
 The criteria that the labelers used to label the tweets were:
 * The item looks like it could potentially be bought 
@@ -201,7 +210,14 @@ The criteria that the labelers used to label the tweets were:
   * The item has schreger lines in the image and looks like ivory
 
 
-We used three labelers to label the tweets.
+The dataset was labeled by three volunteers. Labeling happened in two stages. The first stage was each labeler labeled each tweet individually. The labels from all three labelers agreed 85.8% of the time from this stage. In the second stage the labelers worked together.  When the labelers disagreed on a tweet, each person would explain why they picked a label they did. The labelers then relabeled the tweet if they decided that the argument changed their opinion. After stage 2, the labelers agreed on 99.6% of the tweets. There were only two tweets that the labelers disagreed on. The final labels for these tweets were decided by majority voting.
+
+The final dataset had 315 tweets without IIT and 177 tweets with IIT totaling 492 tweets.
+
+
+
+
+The second stage was each labeler labeled the tweets in groups. The first stage was done in groups of 10 tweets. The second stage was done in groups of 20 tweets. 
 
 Once the labelers had labeled all the tweets in the dataset, we used the following steps to create the dataset:
 * Combine all tweet's labels by adding them together. 
