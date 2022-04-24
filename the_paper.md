@@ -222,47 +222,20 @@ The first variation with just the tweets text was used to train the model. We us
 
 The second variation with the tweets text and the user description was used to train the model. In between the text and user description we added the token [sep] to tell the model we were transitioning to the next section of the dataset. If there was no user description (not all Twitter users have descriptions), we put [nodes] which we added as a custom token to the model.   We used a train, validation, and test split of 80%, 10%, and 10% respectively. The data was split using a stratified split. The token length was set to 137 since that was the max token length in the dataset. The model was run on a tenfold cross validation. The model was trained on the training data and tested on the test data. The model was then saved.
 
-The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images from the tweet was used to train the model. In between the text and user description, we added the token [sep] to tell the model we were transitioning to the next section of the dataset. If there was no user description (not all Twitter users have descriptions), we put [nodes] which we added as a custom token to the model.   In between the user description and the OCR, we added the token [sep] to tell the model we were transitioning to the next section of the dataset. If there was no OCR, we put [noocr] which we added as a custom token to the model.   We used a train, validation, and test split of 80%, 10%, and 10% respectively. The data was split using a stratified split. The token length was set to 476 since that was the max token length in the dataset. We also tried a token length of 313 since there was only one tweet with a token length of 476 and we thought it was an outlier. The model was run on a tenfold cross validation. The model was trained on the training data and tested on the test data. The model was then saved.
+The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images from the tweet was used to train the model. In between the text and user description, we added the token [sep] to tell the model we were transitioning to the next section of the dataset. If there was no user description (not all Twitter users have descriptions), we put [nodes] which we added as a custom token to the model. In between the user description and the OCR, we added the token [sep] to tell the model we were transitioning to the next section of the dataset. If there was no OCR, we put [noocr] which we added as a custom token to the model.   We used a train, validation, and test split of 80%, 10%, and 10% respectively. The data was split using a stratified split. The token length was set to 476 since that was the max token length in the dataset. We also tried a token length of 313 since there was only one tweet with a token length of 476 and we thought it was an outlier. The model was run on a tenfold cross validation. The model was trained on the training data and tested on the test data. The model was then saved.
 
 
-Finally the model 
-
-
-The second stage was each labeler labeled the tweets in groups. The first stage was done in groups of 10 tweets. The second stage was done in groups of 20 tweets. 
-
-Once the labelers had labeled all the tweets in the dataset, we used the following steps to create the dataset:
-* Combine all tweet's labels by adding them together. 
-* If 
-
-
-
-
-
-
-
-We decided to u
-
-BERT model
-Model that is being used
-Hyperparameters
-Token length
-Ten-fold results
-What tokenizer is being used
-Custom words
-
-
-Dataset
-What the final split ended up being
-What our agreement ratio is
-How many tweets are in the dataset
-How the dataset was cleaned
-What format the dataset is stored in
-The token length for each result
-How the strings were put together for the user description/OCR
-
+Finally, the BERT model that we used was bert-uncased from huggingface. We fine-tuned the model using the huggingface glue_run example code. We also added the custom tokens to the model: [nodes], [noocr], {{URL}}, {{MENTION}}, and {{EMAIL}}.
 
 # Results
 
+To get our final results, we ran ten fold cross validation on the model. We ran the model on all three variations of the dataset with the parameters listed above. The results can be seen in figuers 1-3.
+
+
+
+
+* F1 scores
+* 
 Classification reports
 Which component is useful
 
