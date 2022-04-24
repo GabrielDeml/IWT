@@ -213,10 +213,18 @@ The dataset was labeled by three volunteers. Labeling happened in two stages. Th
 The final dataset had 315 tweets without IIT and 177 tweets with IIT totaling 492 tweets.
 
 The dataset then needed to be cleaned a second time before being converted to a format that the model could understand. The dataset was cleaned in the following steps:
-* Remove all &amp; characters. These were fragments of HTML that were not removed.
+* Remove all &amp; characters using beautiful soup These were fragments of HTML that were not removed.
 * Remove all Tweets with duplicate text. Some duplicate tweets were not removed before labeling because they had different tweet ids which we were checking for.
 
 We wanted to try training the model on three variations of the dataset. The first variation, with just the tweets text. The second variation with the tweets text and the user description. The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images. 
+
+To obtain the OCR of the images, we used the following steps:
+* Run teseract on each image.
+* If the tweet has more that one image combine the text from all the images using spaces.
+* Replace all URLs with a {{URL}} token.
+* Replace all @mentions with a {{MENTION}} token.
+* Replace all email addresses with a {{EMAIL}} token.
+* Clean using beautiful soup.
 
 The first variation with just the tweets text was used to train the model. We used a train, validation, and test split of 80%, 10%, and 10% respectively. The data was split using a stratified split. The token length was set to 95 since that was the max token length in the dataset. The model was run on a tenfold cross validation. The model was trained on the training data and tested on the test data. The model was then saved.
 
@@ -229,7 +237,7 @@ Finally, the BERT model that we used was bert-uncased from huggingface. We fine-
 
 # Results
 
-To get our final results, we ran ten fold cross validation on the model. We ran the model on all three variations of the dataset with the parameters listed above. The results can be seen in figuers 1-3.
+To get our final results, we ran ten fold cross validation on the model. We ran the model on all three variations of the dataset with the parameters listed above. The results can be seen in figures 1-3.
 
 
 
