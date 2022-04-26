@@ -217,7 +217,6 @@ The dataset then needed to be cleaned a second time before being converted to a 
 * Remove all Tweets with duplicate text. Some duplicate tweets were not removed before labeling because they had different tweet ids which we were checking for.
 
 We wanted to try training the model on three variations of the dataset. The first variation, with just the tweets text. The second variation with the tweets text and the user description. The third variation with the tweets text, the user description, and optical character recognition (OCR) of the images. 
-
 To obtain the OCR of the images, we used the following steps:
 * Run teseract on each image.
 * If the tweet has more that one image combine the text from all the images using spaces.
@@ -237,7 +236,7 @@ Finally, the BERT model that we used was bert-uncased from huggingface. We fine-
 
 # Results
 
-To get our final results, we ran ten fold cross validation on the model. We ran the model on all three variations of the dataset with the parameters listed above. The results can be seen in figures 1-3.
+To get our final results, we ran tenfold cross validation on the model. We ran the model on all three variations of the dataset with the parameters listed above. The results can be seen in figures 1-5. For OCR we used a token length of 476 since that was the max token length in the dataset. We also tried a token length of 313 since there was only one tweet with a token length of 476 and we thought it was an outlier. 
 
 
 
@@ -270,7 +269,6 @@ Token length
 Ten-fold results
 What tokenizer is being used
 Custom words
-
 Dataset
 What the final split ended up being
 What our agreement ratio is
@@ -280,7 +278,17 @@ What format the dataset is stored in
 The token length for each result
 How the strings were put together for the user description/OCR
 
+# Analysis
 
+## Seed Tweets
+
+Originally, we took the seed Tweets at face value and assumed that their labels were correct. When we were labeling the dataset, we discovered that 4 out if the 9 seed tweets were labeled incorrectly. They were not IIT. We will discuss the analysis of these tweets in this section.
+
+In the figure 7 the Tweet clearly states that the item is made of “french ivory”. French ivory is a term for plastic that is made to resemble ivory. It is a plastic, not an ivory. Furthermore, looking at the image, there are no schreger lines. This is what makes us believe that the item is made of plastic, not ivory.
+
+We realized that the tweet text and image in Figure 7 was identical to a second tweet in the seed tweets. The user that posted the tweets were different accounts, along with the tweet IDs being different. This makes us believe that the two accounts might be the same person due to the fact that they posted the same tweet.
+
+The tweet in Figure 7 along with its duplicate tweet were what accounted for two of the incorrectly labeled seed tweets.
 
 # Citations
 Used:
