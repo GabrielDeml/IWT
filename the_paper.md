@@ -284,11 +284,25 @@ How the strings were put together for the user description/OCR
 
 Originally, we took the seed Tweets at face value and assumed that their labels were correct. When we were labeling the dataset, we discovered that 4 out if the 9 seed tweets were labeled incorrectly. They were not IIT. We will discuss the analysis of these tweets in this section.
 
+### Figure 7.
 In the figure 7 the Tweet clearly states that the item is made of “french ivory”. French ivory is a term for plastic that is made to resemble ivory. It is a plastic, not an ivory. Furthermore, looking at the image, there are no schreger lines. This is what makes us believe that the item is made of plastic, not ivory.
 
 We realized that the tweet text and image in Figure 7 was identical to a second tweet in the seed tweets. The user that posted the tweets were different accounts, along with the tweet IDs being different. This makes us believe that the two accounts might be the same person due to the fact that they posted the same tweet.
 
 The tweet in Figure 7 along with its duplicate tweet were what accounted for two of the incorrectly labeled seed tweets.
+
+### Figure 8.
+
+In Figure 8 we find no evidence that the tweet contains ivory. The text does not state that the item is made of ivory. The image also does not show any signs of ivory. We believe that the original labelers might have gotten confused by the white clock face. Upon further inspection, though, it is clear that it is made of wood. This is because of the following reasons:
+* The clock face shows no signs of schreger lines.
+* The clock face is too large to be made of ivory.
+
+For those reasons, we believe that the tweet in Figure 8 is not an IIT tweet.
+
+### Figure 9.
+
+In figure 9 it clearly states that the item is made of French ivory. For the same reasons as in Figure 7, we believe that the tweet in Figure 9 is not an IIT tweet.
+
 
 # Citations
 Used:
