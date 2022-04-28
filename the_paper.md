@@ -243,22 +243,22 @@ We ran tenfold cross-validation on all three models. The three model variations:
 
 We used the following hyperparameters:
 
-Text Model:
+Model 1 - Text:
 * max_seq_length 95
 * train batch size 16
 * eval batch size 16
 * train epochs 5
-User Description Model:
+Model 2 - Text + User Description:
 * max_seq_length 137
 * train batch size 16
 * eval batch size 16
 * train epochs 5
-OCR 476 Model:
+Model 3 - OCR 476 Model:
 * max_seq_length 476
 * train batch size 16
 * eval batch size 16
 * train epochs 5
-OCR 313 Model:
+Model 4 - OCR 313 Model:
 * max_seq_length 313
 * train batch size 16
 * eval batch size 16
@@ -274,7 +274,9 @@ The results for the four models can be seen in figure 2 and table 1. Each models
 For OCR, we used a token length of 476 since that was the max token length in the dataset. We also tried a token length of 313. The reason for this is that there was only one tweet with a token length of 476. All other tweets were at or below 313. 476 is 163 or 34% larger than the next biggest token length. We thought this was an outlier so we decided to use a token length of 313.
 
 
+In figure 2 it can be seen that model 3 performs the best over all compared to the other three models with an average accuracy of 0.94. Model 4 came in second with an average accuracy of 0.93. Model 2 performs the next best with an average accuracy of 0.92. Model 1 performs the worst with an average accuracy of 0.91.
 
+In table 1 it can be seen that model 3 performs the best. Model 4 is second best. Model 2 is third best. Model 1 is the worst. Standard deviations are shown for each model. Every standard deviation is 0.03 except for model 1 which is 0.03. 
 
 
 * F1 scores
