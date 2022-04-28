@@ -304,6 +304,8 @@ For those reasons, we believe that the tweet in Figure 8 is not an IIT tweet.
 In figure 9 it clearly states that the item is made of French ivory. For the same reasons as in Figure 7, we believe that the tweet in Figure 9 is not an IIT tweet.
 
 
+
+
 # Citations
 Used:
 
