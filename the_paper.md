@@ -236,7 +236,43 @@ Finally, the BERT model that we used was bert-uncased from huggingface. We fine-
 
 # Results
 
-To get our final results, we ran tenfold cross validation on the model. We ran the model on all three variations of the dataset with the parameters listed above. The results can be seen in figures 1-5. For OCR we used a token length of 476 since that was the max token length in the dataset. We also tried a token length of 313 since there was only one tweet with a token length of 476 and we thought it was an outlier. 
+In this section, we will show the results of all four models. We will compare the accuracy between the models. We will give insight into why the models performed better or worse. 
+
+We ran tenfold cross-validation on all three models. The three model variations: tweet text, tweet text + user description, and tweet text + user description + OCR. 
+
+
+We used the following hyperparameters:
+
+Text Model:
+* max_seq_length 95
+* train batch size 16
+* eval batch size 16
+* train epochs 5
+User Description Model:
+* max_seq_length 137
+* train batch size 16
+* eval batch size 16
+* train epochs 5
+OCR 476 Model:
+* max_seq_length 476
+* train batch size 16
+* eval batch size 16
+* train epochs 5
+OCR 313 Model:
+* max_seq_length 313
+* train batch size 16
+* eval batch size 16
+* train epochs 5
+
+
+
+
+The results for the four models can be seen in figure 2 and table 1. Each models classification report for the 10 fold cross validation can be seen in the appendix. The average accuracy for each model is shown in figure 2. The average accuracy along with the standard deviation is shown in table 1. 
+
+
+
+For OCR, we used a token length of 476 since that was the max token length in the dataset. We also tried a token length of 313. The reason for this is that there was only one tweet with a token length of 476. All other tweets were at or below 313. 476 is 163 or 34% larger than the next biggest token length. We thought this was an outlier so we decided to use a token length of 313.
+
 
 
 
