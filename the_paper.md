@@ -379,6 +379,32 @@ It would be good to get input from wild life experts. There may be tweets that a
 Incorporating images into the prediction is most likely will greatly improve the accuracy of the model. Even being a human it is sometimes hard to tell if not impossible without looking at the image. The model now is not looking at the image which is putting it at a large disadvantage. 
 
 Right now the dataset is greatly skewed towards the keyword ivory. This is because when we were creating the dataset we wer filtering for the keyword ivory to when we were creating the dataset. We did the filtering to reduce the number of tweets that we manually needed to label. This does cause the model to be biased. If a IIT tweet does not contain "ivory" then there is a good chance that the model will not be able to label it as an IIT tweet. 
+
+
+# Introduction
+Illegal wildlife trafficking (IIT) is an emerging problem causing global concern. In this research, we primarily focus on the ivory-related IIT (mainly ivory from elephants, sometimes the rhinos(11) and walruses). To fight against these trafficking behaviors, countries worldwide have established various policies and laws for preventing IIT. For example, the U.S. Fish and Wildlife Service (FWS) prohibits the "import and export of African elephant ivory with limited exceptions for Musical instruments, items that are part of a traveling exhibition, and items that are part of a household move or inheritance when specific criteria are met; and ivory for law enforcement or genuine scientific purposes." (5) Despite these bans in these countries, people are still observing an average of 30,000 African elephants poached each year with a continent-wide population of only 400,000 (6). This fact is a significant contributor to the 0.6% population decrease of the African elephant population every year. To help mitigate the problem, we searched for methods that automatically detect IIT-related postings on online social platforms (more specifically, Twitter). However, there are two major obstacles in such a task: 1) prior works lack enough data with annotated labels for training an effective model, and 2) prior work leveraged rather crude and low accuracy methods for effectively and efficiently detecting IIT postings. (12) 
+
+Project Goal
+There were two goals for this project:
+The first goal is to build a large enough dataset of IIT texts that such platforms can use as a seed dataset. One of our biggest challenges was generating our initial dataset to seed the model. We believe that this dataset will be large enough to be used by researchers in the future.
+The second goal is to demonstrate that it is possible to classify user-generated content automatically. We believe that this model could potentially be applied to a dynamic and high-speed platform. This paper focuses on Twitter, but the same principles should also apply to other platforms. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes posts promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform implementing such an algorithm. 
+
+With these challenges in mind, in this work, we aim to make the following contribution:
+We collect, annotate and analyze a novel multimodal dataset of IIT Tweets at scale. 
+We created the different variations of BERT-based models for identifying IIT postings. Our best model obtained an average accuracy of XX% and an average macro F1 score of XX% under a 10-fold cross-validation setting.
+
+# Conclusion
+
+IIT is a problem that is currently being faced by many countries. The goal of this project is potently help fight against IIT. To do so, we created the largest dataset of IIT which we aware of. We hope that it will at least be a good seed dataset for future research. We also wanted to demonstrate that it would be possible to detect IIT-related posts automatically. We believe that a similar model to the one we created could be applied to any dynamic platform and high-speed social media platform. We hope that this paper will be a good starting point for any platform implementing such an algorithm. We believe that this a similar model could potentially be applied to any dynamic and high-speed platform. This paper focuses on Twitter, but the same principles should also apply to other platforms. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes posts promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform implementing such an algorithm.
+
+
+* Generate a large enough dataset of IIT tweets that can be used as a seed dataset by other researchers.
+* Demonstrate that it is possible to automatically detect IIT-related posts on social media platforms. 
+
+
+
+We believe that it is possible to automatically detect IIT-related posts on Twitter. We believe that this model could potentially be applied to a dynamic and high-speed platform. This paper focuses on Twitter, but the same principles should also apply to other platforms. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes posts promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform implementing such an algorithm.
+
 # Citations
 Used:
 
