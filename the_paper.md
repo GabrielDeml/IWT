@@ -234,6 +234,8 @@ The third variation with the tweets text, the user description, and optical char
 
 Finally, the BERT model that we used was bert-uncased from huggingface. We fine-tuned the model using the huggingface glue_run example code. We also added the custom tokens to the model: [nodes], [noocr], {{URL}}, {{MENTION}}, and {{EMAIL}}.
 
+BERT is a state of the art transformer model. We are using the Hugging Face package that is pre trained on 
+
 # Results
 
 In this section, we will show the results of all four models. We will compare the accuracy between the models. We will give insight into why the models performed better or worse. 
@@ -265,7 +267,7 @@ Model 4 - OCR 313 Model:
 * train epochs 5
 
 
-
+In table 1 contains all the hyperparameters used for each of the four models. For data sources model 1 uses the tweet text, Model 2 uses the tweet text and user description, Model 3 uses the tweet text, user description  and OCR, and Model 4 also uses the tweet text, user description and OCR. The different between model 3 and 4 is the max sequence length. Model 3 uses 476 tokens and model 4 uses 313 tokens.
 
 The results for the four models can be seen in figure 2 and table 1. Each models classification report for the 10 fold cross validation can be seen in the appendix. The average accuracy for each model is shown in figure 2. The average accuracy along with the standard deviation is shown in table 1. 
 
@@ -278,6 +280,25 @@ In figure 2 it can be seen that model 3 performs the best over all compared to t
 
 In table 1 it can be seen that model 3 performs the best. Model 4 is second best. Model 2 is third best. Model 1 is the worst. Standard deviations are shown for each model. Every standard deviation is 0.03 except for model 1 which is 0.03. 
 
+
+Discussion of the results:
+
+Model 1:
+This model performing the worst is most likely because it has the least amount of data to work with. It only had the tweets text. Even being a human looking at at just the text without the user description it can be difficult to make a prediction. This is from our criteria for labeling the data. Our criteria is some on buying or selling IIT. We classify tweets that are talking about an ivory item and are a user that is a auctioneer or an antique seller as IIT. This is because we assume that they are attempting to sell or buy the item. Often the only way to tell that they are an auctioneer or antique seller is to look at there user description. Model 1 is at a disadvantage because it only has the tweets text. 
+
+Model 2:
+
+It makes sense that this model performs better than model 1. The user description is important because even as a human it is often necessary to look at the user description to make a prediction. This is for the same reason as described in model 1. It is interesting that it only performs 1% better than model 1. We originally assumed that it would perform better that model 1 by a larger margin. We think that the model might be smart enough that is can tell whether or not the user is an auctioneer or an antique seller just based on the tweet text. 
+
+Model 3:
+
+This model performs the best. It has the most amount of data to work with. The model has the tweets text, user description, and OCR. When looking at the images in the tweets there are often times that the user is advertising IIT in text in the image. Often there is even a URL linking to the website to buy the IIT item. Being a human it is often hard to parse the output from the OCR. The text is generally half broken with a bunch of random characters. The model must be able to parse the OCR and use it to help make a prediction. This model also does not have a large amount of padding for most of the tweets. This probably helps the model not get confused about the end of the tweet.
+
+Model 4:
+
+It makes sense that this model performs the second best. The large amount of padding at the end for most tweets just confuses the model instead of helping it. 
+
+It also does not have a large amount of padding added to the end by the tokenizer. 
 
 * F1 scores
 * 
@@ -341,9 +362,17 @@ For those reasons, we believe that the tweet in Figure 8 is not an IIT tweet.
 
 In figure 9 it clearly states that the item is made of French ivory. For the same reasons as in Figure 7, we believe that the tweet in Figure 9 is not an IIT tweet.
 
+# Limitations
 
+What I want to talk about: 
+* Still are a limited by the dataset size. 
+* We are not wild life experts we are computer scientists.
+* The images are not being incorporated into the the prediction.
+* We are greatly skewed towards the keyword "ivory".
 
+There are four main future works that would be worth looking into: Creating a larger dataset, having input from wild life experts, incorporating images into the prediction, and unskewing the data towards the keyword "ivory".
 
+Even though the dataset is the biggest dataset that we know of, it is still not a very large dataset. 
 # Citations
 Used:
 
