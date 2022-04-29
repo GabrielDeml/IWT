@@ -149,6 +149,9 @@ There is one paper is particularly relevant to this paper.
 
 In this section, we will discuss three things. First, we will talk about filtering through the corpus of tweets to create the dataset. Secondly, the creation and cleaning of the dataset. Thirdly, we will discuss the creation of the model.
 
+iCreating the dataset was split into 3 distinct steps. First, we go seed tweets from other researcers. 
+
+
 Our starting point was 9 IIT Tweets from X paper. Upon further investigation, we realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 71 IIT tweets.
 
 We needed a way to further expand the dataset since fine tuning models like BERT require lots of training data. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to automatically classify tweets. The tweets that the model had the highest confidence in could be manually labeled by a human. We came up with four ways to resolve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
@@ -362,6 +365,14 @@ For those reasons, we believe that the tweet in Figure 8 is not an IIT tweet.
 
 In figure 9 it clearly states that the item is made of French ivory. For the same reasons as in Figure 7, we believe that the tweet in Figure 9 is not an IIT tweet.
 
+
+## Case study
+Tweet:
+"magnifying glass ivory  10 cm c.1890 {{url}} via {{mention}} [sep] welcome to the london silver company a division of london international silver co.  we are a specialist in magnifying glasses all quintessentially british."
+
+Model 1 (text only) classified this tweet as not IIT while model 2 (text and user description) classified it as IIT. We believe that the tweet is IIT because it is made of ivory and trying to be sold by a seller. This means that model 2 is correct while model 1 is incorrect. This is most likely becaus model 2 has more data to work with which we think is critical to properly classifying the tweet. Based on or criteria just looking at the tweet's text we would classify the tweet as not IIT. It is made out of ivory, but there is no indication that it is being bought or sold. Once we look at the user description, we see that the user is a seller. They are a company that sells magnifying glasses. Knowing that the user is a seller, we would then classify the tweet as IIT. Since model 1 does not have the user description it is correct to classifying the tweet based on the knowledge it has. However we know that it is incorrectly classifying the tweet. 
+
+
 # Limitations
 
 What I want to talk about: 
@@ -395,7 +406,7 @@ We created the different variations of BERT-based models for identifying IIT pos
 
 # Conclusion
 
-IIT is a problem that is currently being faced by many countries. The goal of this project is potently help fight against IIT. To do so, we created the largest dataset of IIT which we aware of. We hope that it will at least be a good seed dataset for future research. We also wanted to demonstrate that it would be possible to detect IIT-related posts automatically. We believe that a similar model to the one we created could be applied to any dynamic platform and high-speed social media platform. We hope that this paper will be a good starting point for any platform implementing such an algorithm. We believe that this a similar model could potentially be applied to any dynamic and high-speed platform. This paper focuses on Twitter, but the same principles should also apply to other platforms. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes posts promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform implementing such an algorithm.
+IIT is a problem that is currently being faced by many countries. The goal of this project is potently help fight against IIT. To do so, we created the largest dataset of IIT which we aware of. Hopefully it is large enough to be used by researchers in the future. We also wanted to demonstrate that it would be possible to detect IIT-related posts automatically. We believe that a similar model to the one we created could be applied to any dynamic platform and high-speed social media platform. We hope that this paper will be a good starting point for any platform implementing such an algorithm. We believe that this a similar model could potentially be applied to any dynamic and high-speed platform. This paper focuses on Twitter, but the same principles should also apply to other platforms. We hope that it will demonstrate to media platforms that it is possible and practical to implement an algorithm that automatically removes posts promoting the sale of IIT. We also hope that this paper would be a good starting point for any platform implementing such an algorithm.
 
 
 * Generate a large enough dataset of IIT tweets that can be used as a seed dataset by other researchers.
