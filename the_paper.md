@@ -372,7 +372,13 @@ What I want to talk about:
 
 There are four main future works that would be worth looking into: Creating a larger dataset, having input from wild life experts, incorporating images into the prediction, and unskewing the data towards the keyword "ivory".
 
-Even though the dataset is the biggest dataset that we know of, it is still not a very large dataset. 
+Even though the dataset is the biggest dataset that we know of, it is still not a very large dataset. More tweets need to be collected and labeled to make the dataset larger. This should make the model more accurate.
+
+It would be good to get input from wild life experts. There may be tweets that are labeled incorrectly. It might also be possible that there are some obvious was to improve the dataset, but since we are not a wild life expert, do not see it. 
+
+Incorporating images into the prediction is most likely will greatly improve the accuracy of the model. Even being a human it is sometimes hard to tell if not impossible without looking at the image. The model now is not looking at the image which is putting it at a large disadvantage. 
+
+Right now the dataset is greatly skewed towards the keyword ivory. This is because when we were creating the dataset we wer filtering for the keyword ivory to when we were creating the dataset. We did the filtering to reduce the number of tweets that we manually needed to label. This does cause the model to be biased. If a IIT tweet does not contain "ivory" then there is a good chance that the model will not be able to label it as an IIT tweet. 
 # Citations
 Used:
 
