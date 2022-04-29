@@ -147,12 +147,18 @@ There is one paper is particularly relevant to this paper.
 
 # Methodology
 
-In this section, we will discuss three things. First, we will talk about filtering through the corpus of tweets to create the dataset. Secondly, the creation and cleaning of the dataset. Thirdly, we will discuss the creation of the model.
+In this section, we will first discuss the creation of the dataset. Secondly, we will discuss using the dataset to create a model for predicting IIT. 
 
-iCreating the dataset was split into 3 distinct steps. First, we go seed tweets from other researcers. 
+Creating the dataset was split into 3 distinct steps. First, we got seed tweets from other researchers. Secondly we got a corpus of tweets from the twitter API. Thirdly we filtered though the the tweets algorithmically. Finally we manually labeled the tweets. 
+
+Our seed tweets came from   . We were provided with 9 seed tweets that contained IIT from 10 seed user. Upon further investigation, we realized that 4 of them did not meet out criteria to be considered IIT. We will discuss this in detail latter. 
+
+For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 67 IIT tweets.
+
+We needed a way to expand the dataset further, since fine-tuning models like BERT require lots of training data. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to classify tweets automatically. The model's tweets which had the highest confidence level the human could manually label. We came up with three ways to resolve this problem: Firstly, we started with using a corpus of tweets that are known to have IIT. Secondly, using the seed tweets, we iteratively created a better classifier. Thirdly, once we ran the classifier on the tweet corpus, we used keyword filtering to further increase the likelihood that the tweets contain IIT.
 
 
-Our starting point was 9 IIT Tweets from X paper. Upon further investigation, we realized that 4 of them were not IIT which we will discuss in detail later. For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 71 IIT tweets.
+
 
 We needed a way to further expand the dataset since fine tuning models like BERT require lots of training data. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to automatically classify tweets. The tweets that the model had the highest confidence in could be manually labeled by a human. We came up with four ways to resolve this problem: using a corpus of tweets that are known to have IIT, iteratively create a better classifier, and use keyword filtering.
 
