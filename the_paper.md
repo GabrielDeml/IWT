@@ -153,9 +153,15 @@ Creating the dataset was split into 3 distinct steps. First, we got seed tweets 
 
 Our seed tweets came from   . We were provided with 9 seed tweets that contained IIT from 10 seed user. Upon further investigation, we realized that 4 of them did not meet out criteria to be considered IIT. We will discuss this in detail latter. 
 
-For each of the nine tweets’ users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 67 IIT tweets.
+Since we were building a were attempting to train larger model we wanted to create a large dataset of IIT. We needed to find a way to expand the seed tweets that we already had. Finding IIT tweets is like looking for a needle in a haystack. There are many more non IIT tweets that IIT tweets. This makes it impractical to manually label random tweets. To grow our dataset we needed a way to flitter though a corpus of tweets so that there is a reasonable probability that they contain IIT.  
 
-We needed a way to expand the dataset further, since fine-tuning models like BERT require lots of training data. Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to classify tweets automatically. The model's tweets which had the highest confidence level the human could manually label. We came up with three ways to resolve this problem: Firstly, we started with using a corpus of tweets that are known to have IIT. Secondly, using the seed tweets, we iteratively created a better classifier. Thirdly, once we ran the classifier on the tweet corpus, we used keyword filtering to further increase the likelihood that the tweets contain IIT.
+To start we figured that the seed users who posted tweets containing IIT most likely posted more that one tweet containing IIT. Our assumption turned out correct. Using the twitter API we collected the newest 100 tweets from each seed users timeline. This gave us a dataset of 1000 tweets to start with. After manually going though the dataset we found 66 tweet that we thought contained IIT. This brought our total IIT tweets to 70 tweets. 
+
+
+For each of the ten seed users, we manually went through the first 100 tweets in their timeline. This gave us another 62 IIT tweets to add to our dataset totaling 67 IIT tweets.
+
+
+ Finding IIT is essentially like looking through a needle in a haystack, so manually going through every tweet would have been impossible. We needed a way to classify tweets automatically. The model's tweets which had the highest confidence level the human could manually label. We came up with three ways to resolve this problem: Firstly, we started with using a corpus of tweets that are known to have IIT. Secondly, using the seed tweets, we iteratively created a better classifier. Thirdly, once we ran the classifier on the tweet corpus, we used keyword filtering to further increase the likelihood that the tweets contain IIT.
 
 
 
